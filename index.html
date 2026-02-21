@@ -2216,8 +2216,8 @@
           <div class="stat-lbl">Clientes enterprise</div>
         </div>
         <div class="stat">
-          <div class="stat-num" data-target="30" data-suf="+">30<span class="acc">+</span></div>
-          <div class="stat-lbl">Mejora eficiencia</div>
+          <div class="stat-num" data-pre="+" data-target="30" data-suf="%">+30<span class="acc">%</span></div>
+          <div class="stat-lbl">Eficiencia Operativa</div>
         </div>
       </div>
     </div>
@@ -2379,8 +2379,8 @@
         </div>
         <div class="exp-item">
           <div class="exp-ico">⚡</div>
-          <div class="exp-num">30<span class="acc">%+</span></div>
-          <div class="exp-lbl">Eficiencia Op.</div>
+          <div class="exp-num" data-pre="+" data-target="30" data-suf="%">+30<span class="acc">%</span></div>
+          <div class="exp-lbl">Eficiencia Operativa</div>
         </div>
       </div>
     </div>
@@ -3402,10 +3402,11 @@
             qsa('.stat-num').forEach(el => {
               const target = parseInt(el.dataset.target) || 0;
               const suf = el.dataset.suf || '';
+              const pre = el.dataset.pre || '';
               let cur = 0;
               const tick = setInterval(() => {
                 cur = Math.min(cur + target / 60, target);
-                el.innerHTML = Math.floor(cur) + '<span class="acc">' + suf + '</span>';
+                el.innerHTML = pre + Math.floor(cur) + '<span class="acc">' + suf + '</span>';
                 if (cur >= target) clearInterval(tick);
               }, 16);
             });
