@@ -297,17 +297,32 @@
     .logo {
       display: inline-flex;
       align-items: center;
+      gap: 12px;
       text-decoration: none;
       font-family: var(--font);
-      font-weight: 600;
-      font-size: 1.25rem;
-      letter-spacing: .12em;
-      color: rgba(255, 255, 255, 0.9);
-      transition: opacity .2s;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: .15em;
+      color: #fff;
+      transition: transform .2s
     }
 
     .logo:hover {
-      opacity: .85;
+      transform: scale(1.02);
+    }
+
+    .logo-hex {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 12px var(--cyan));
+    }
+
+    .logo-text {
+      background: linear-gradient(90deg, #fff, var(--text2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .nav-links {
@@ -2045,6 +2060,68 @@
         display: none
       }
     }
+
+    /* SUCCESS OVERLAY */
+    .form-success-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(6, 9, 18, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      padding: 20px;
+    }
+
+    .form-success-overlay.in {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .success-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--bd);
+      padding: 40px;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 400px;
+      transform: translateY(20px);
+      transition: transform 0.4s ease;
+    }
+
+    .form-success-overlay.in .success-box {
+      transform: translateY(0);
+    }
+
+    .success-ico {
+      width: 60px;
+      height: 60px;
+      background: var(--cyan);
+      color: var(--bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 30px var(--cyan-g);
+    }
+
+    .success-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .success-box p {
+      color: var(--text2);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 
@@ -2069,7 +2146,14 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#inicio" class="logo">
-        OPENCORE
+        <svg class="logo-hex" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 5L32.9867 12.5V27.5L20 35L7.01325 27.5V12.5L20 5Z" stroke="var(--cyan)" stroke-width="2" />
+          <path d="M20 12L26.9282 16V24L20 28L13.0718 24V16L20 12Z" fill="var(--cyan)" opacity="0.3" />
+          <circle cx="20" cy="20" r="3" fill="var(--cyan)" />
+          <path d="M20 12L26.9282 16M26.9282 24L20 28M13.0718 24L20 28M13.0718 16L20 12" stroke="var(--cyan)"
+            stroke-width="1.5" stroke-opacity="0.5" />
+        </svg>
+        <span class="logo-text">OPENCORE</span>
       </a>
       <div class="nav-links">
         <a href="#inicio">Inicio</a>
@@ -2182,14 +2266,56 @@
     <div class="container">
       <p class="trust-lbl">Empresas líderes que confían en nuestra ingeniería:</p>
       <div class="trust-logos">
-        <div class="tl"><span class="tl-icon">🌐</span><span class="tl-name">ONU</span></div>
-        <div class="tl"><span class="tl-icon">✈️</span><span class="tl-name">COCHA</span></div>
-        <div class="tl"><span class="tl-icon">☕</span><span class="tl-name">Nestlé</span></div>
-        <div class="tl"><span class="tl-icon">💧</span><span class="tl-name">Aguas Andinas</span></div>
-        <div class="tl"><span class="tl-icon">🚜</span><span class="tl-name">Finning</span></div>
-        <div class="tl"><span class="tl-icon">🏗️</span><span class="tl-name">Komatsu</span></div>
-        <div class="tl"><span class="tl-icon">🏷️</span><span class="tl-name">Tesa</span></div>
-        <div class="tl"><span class="tl-icon">✨</span><span class="tl-name">Entre otras</span></div>
+        <div class="tl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.8">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+          </svg>
+          <span class="tl-name">ONU</span>
+        </div>
+        <div class="tl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.8">
+            <path
+              d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.47c-.31.17-.69.17-1 0l-7.97-4.47c-.32-.17-.53-.5-.53-.88V7.5c0-.38.21-.71.53-.88l7.97-4.47c.31-.17.69-.17 1 0l7.97 4.47c.32.17.53.5.53.88v9z" />
+          </svg>
+          <span class="tl-name">COCHA</span>
+        </div>
+        <div class="tl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.8">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+          </svg>
+          <span class="tl-name">Nestlé</span>
+        </div>
+        <div class="tl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.8">
+            <path
+              d="M12 2c-5.33 0-8 2.67-8 8 0 5.33 2.67 8 8 8s8-2.67 8-8c0-5.33-2.67-8-8-8zm0 14c-3.31 0-5.33-1.33-5.33-4.67 0-3.34 2.02-4.67 5.33-4.67s5.33 1.33 5.33 4.67c0 3.34-2.02 4.67-5.33 4.67z" />
+          </svg>
+          <span class="tl-name">Aguas Andinas</span>
+        </div>
+        <div class="tl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.8">
+            <path d="M22 2L2 22M2 2l20 20" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <span class="tl-name">Finning</span>
+        </div>
+        <div class="tl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.8">
+            <path d="M4 4h16v16H4V4z" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <span class="tl-name">Komatsu</span>
+        </div>
+        <div class="tl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.8">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"
+              fill="none" />
+          </svg>
+          <span class="tl-name">Tesa</span>
+        </div>
+        <div class="tl">
+          <span class="tl-icon">✨</span>
+          <span class="tl-name">Entre otras</span>
+        </div>
       </div>
     </div>
   </section>
@@ -3074,12 +3200,46 @@
           el.addEventListener('mouseenter', () => {
             ring.style.width = ring.style.height = '56px';
             ring.style.borderColor = 'rgba(0,194,255,.85)';
-            dot.style.width = dot.style.height = '13px';
+            dot.style.width = dot.style.height = 'px'; // Hide dot on hover
+            dot.style.opacity = '0';
           });
           el.addEventListener('mouseleave', () => {
             ring.style.width = ring.style.height = '36px';
             ring.style.borderColor = 'rgba(0,194,255,.5)';
             dot.style.width = dot.style.height = '8px';
+            dot.style.opacity = '1';
+          });
+        });
+
+        // --- MAGNETIC EFFECT ---
+        const magEls = qsa('.btn-primary, .btn-nav, .btn-secondary, .logo');
+        magEls.forEach(el => {
+          el.addEventListener('mousemove', e => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.03)`;
+          });
+          el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+          });
+        });
+
+        // --- 3D TILT EFFECT ---
+        const tiltEls = qsa('.svc-card, .cc, .test-card');
+        tiltEls.forEach(el => {
+          el.addEventListener('mousemove', e => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const xc = rect.width / 2;
+            const yc = rect.height / 2;
+            const dx = x - xc;
+            const dy = y - yc;
+            el.style.transform = `perspective(1000px) rotateX(${-dy / 25}deg) rotateY(${dx / 25}deg) translateY(-5px)`;
+          });
+          el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
           });
         });
       }
@@ -3275,14 +3435,53 @@
       ================================================ */
       const cform = qs('#cform');
       const sbtn = qs('#sbtn');
-      const sbntTxt = qs('#sbtn-txt');
+      const sbtnTxt = qs('#sbtn-txt');
+
       if (cform) {
-        cform.addEventListener('submit', () => {
-          if (sbtn) {
-            sbtn.disabled = true; sbntTxt.textContent = '⏳ Enviando...';
-            sbtn.style.background = 'linear-gradient(135deg,#1a3a70,#2563eb)';
-          }
+        cform.addEventListener('submit', e => {
+          e.preventDefault();
+          if (sbtn.disabled) return;
+
+          sbtn.disabled = true;
+          sbtnTxt.textContent = '⏳ Enviando...';
+          sbtn.style.opacity = '0.7';
+
+          const formData = new FormData(cform);
+
+          fetch(cform.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          }).then(res => {
+            if (res.ok) {
+              showSuccess();
+              cform.reset();
+            } else {
+              throw new Error();
+            }
+          }).catch(() => {
+            alert('Hubo un error al enviar el mensaje. Por favor intente nuevamente.');
+          }).finally(() => {
+            sbtn.disabled = false;
+            sbtnTxt.textContent = '✉️ Enviar mensaje a OpenCORE';
+            sbtn.style.opacity = '1';
+          });
         });
+      }
+
+      function showSuccess() {
+        const overlay = document.createElement('div');
+        overlay.className = 'form-success-overlay';
+        overlay.innerHTML = `
+          <div class="success-box">
+            <div class="success-ico">✓</div>
+            <h3>¡Mensaje Recibido!</h3>
+            <p>Gracias por contactar a OpenCORE. Un especialista te responderá en menos de 24 horas.</p>
+            <button class="btn-primary" onclick="this.parentElement.parentElement.remove()">Cerrar</button>
+          </div>
+        `;
+        document.body.appendChild(overlay);
+        setTimeout(() => overlay.classList.add('in'), 10);
       }
 
     })();
