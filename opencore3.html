@@ -2279,6 +2279,8 @@
 <body>
 
   <!-- Custom cursor (desktop only) -->
+  <div id="c-dot"></div>
+  <div id="c-ring"></div>
   <div id="c-aura"></div>
 
   <main>
@@ -3428,29 +3430,37 @@
 
         document.addEventListener('mousemove', e => {
           mx = e.clientX; my = e.clientY;
-          dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-          aura.style.left = mx + 'px'; aura.style.top = my + 'px';
+          if (dot) { dot.style.left = mx + 'px'; dot.style.top = my + 'px'; }
+          if (aura) { aura.style.left = mx + 'px'; aura.style.top = my + 'px'; }
         });
 
         (function lerpRing() {
           rx += (mx - rx) * .13; ry += (my - ry) * .13;
-          ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+          if (ring) { ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; }
           requestAnimationFrame(lerpRing);
         })();
 
         const hoverEls = qsa('a,button,.svc-card,.cc,.test-card,.cp,.tl,.exp-item,.ti');
         hoverEls.forEach(el => {
           el.addEventListener('mouseenter', () => {
-            ring.style.width = ring.style.height = '56px';
-            ring.style.borderColor = 'rgba(0,194,255,.85)';
-            dot.style.width = dot.style.height = 'px'; // Hide dot on hover
-            dot.style.opacity = '0';
+            if (ring) {
+              ring.style.width = ring.style.height = '56px';
+              ring.style.borderColor = 'rgba(0,194,255,.85)';
+            }
+            if (dot) {
+              dot.style.width = dot.style.height = 'px'; // Hide dot on hover
+              dot.style.opacity = '0';
+            }
           });
           el.addEventListener('mouseleave', () => {
-            ring.style.width = ring.style.height = '36px';
-            ring.style.borderColor = 'rgba(0,194,255,.5)';
-            dot.style.width = dot.style.height = '8px';
-            dot.style.opacity = '1';
+            if (ring) {
+              ring.style.width = ring.style.height = '36px';
+              ring.style.borderColor = 'rgba(0,194,255,.5)';
+            }
+            if (dot) {
+              dot.style.width = dot.style.height = '8px';
+              dot.style.opacity = '1';
+            }
           });
         });
 
