@@ -390,7 +390,9 @@
       gap: 4px;
       padding: 16px 20px 20px;
       border-bottom: 1px solid var(--bd);
-      background: rgba(6, 9, 18, .97)
+      background: rgba(6, 9, 18, .75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
     .mob-menu.open {
@@ -426,6 +428,14 @@
       .ham {
         display: flex
       }
+
+      .hero-bg::after {
+        background: rgba(6, 9, 18, 0.95);
+      }
+
+      .global-canvas {
+        opacity: 0.15;
+      }
     }
 
     /* ================================================
@@ -451,7 +461,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(6, 9, 18, 0.85);
+      background: rgba(6, 9, 18, 0.90);
       /* Darken base background */
     }
 
