@@ -1,0 +1,4415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenCORE Consulting | Ingeniería de Modernización Enterprise & Logística</title>
+  <meta name="description"
+    content="Especialistas en modernización de sistemas legacy, integración ERP y automatización de procesos logísticos en Chile. Potenciamos tu eficiencia operativa con IA y tecnología de clase mundial." />
+
+  <!-- SEO & Canonical -->
+  <link rel="canonical" href="https://opencore.cl/opencore3.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://opencore.cl/opencore3.html">
+  <meta property="og:title" content="OpenCORE Consulting | Ingeniería de Modernización Enterprise">
+  <meta property="og:description"
+    content="Protegemos tu operación e incrementamos la rentabilidad mediante ingeniería de modernización estructural e integración de sistemas críticos.">
+  <meta property="og:image" content="https://opencore.cl/hero_tech_brain_bg.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://opencore.cl/opencore3.html">
+  <meta property="twitter:title" content="OpenCORE Consulting | Ingeniería de Modernización Enterprise">
+  <meta property="twitter:description"
+    content="Expertos en optimización logística y modernización de software B2B para grandes empresas.">
+  <meta property="twitter:image" content="https://opencore.cl/hero_tech_brain_bg.png">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OpenCORE Consulting",
+    "url": "https://opencore.cl/",
+    "logo": "https://opencore.cl/hero_tech_brain_bg.png",
+    "description": "Consultora líder en modernización de software legacy, logística de repuestos e integración ERP en el mercado B2B chileno.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+56-9-4958-7198",
+      "contactType": "sales",
+      "areaServed": "CL",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/opencore"
+    ],
+    "service": [
+      {
+        "@type": "Service",
+        "name": "Modernización de Sistemas Legacy",
+        "description": "Migración estructural de plataformas propietarias a arquitecturas modernas manteniendo la continuidad operativa."
+      },
+      {
+        "@type": "Service",
+        "name": "Integración ERP y Logística",
+        "description": "Optimización de la cadena de suministro y control de activos industriales mediante integraciones críticas."
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ================================================
+   RESET & VARIABLES
+================================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #060912;
+      --bg2: #080c18;
+      --bg3: #0c1220;
+      --surf: #0f1828;
+      --surf2: #162035;
+      --surf3: #1c2a42;
+      --cyan: #00C2FF;
+      --cyan-l: #38D9FF;
+      --cyan-d: rgba(0, 194, 255, .12);
+      --cyan-g: rgba(0, 194, 255, .25);
+      --blue: #2563EB;
+      --blue-l: #3B82F6;
+      --indigo: #4F46E5;
+      --indigo-l: #6366F1;
+      --indigo-d: rgba(79, 70, 229, .15);
+      --text: #F4F8FF;
+      --text2: #C4D7F5;
+      --text3: #8AAEE0;
+      --bd: rgba(0, 194, 255, .08);
+      --bd2: rgba(0, 194, 255, .18);
+      --bd3: rgba(0, 194, 255, .38);
+      --font: 'Plus Jakarta Sans', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --r: 12px;
+      --rl: 20px;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 18px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased
+    }
+
+    @media(pointer:fine) {
+      body {
+        cursor: none
+      }
+    }
+
+    ::selection {
+      background: var(--cyan-d);
+      color: #fff
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg)
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--surf3);
+      border-radius: 2px
+    }
+
+    /* ================================================
+   CUSTOM CURSOR
+================================================ */
+    #c-dot,
+    #c-ring,
+    #c-aura {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      border-radius: 50%;
+      z-index: 9999;
+      transform: translate(-50%, -50%)
+    }
+
+    #c-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan), 0 0 20px var(--cyan-g);
+      transition: width .2s, height .2s
+    }
+
+    #c-ring {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid rgba(0, 194, 255, .5);
+      z-index: 9998;
+      transition: width .25s, height .25s, border-color .2s
+    }
+
+    #c-aura {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(0, 194, 255, .07), transparent 70%);
+      z-index: 9997;
+      transition: transform .06s linear
+    }
+
+    @media(pointer:coarse) {
+
+      #c-dot,
+      #c-ring,
+      #c-aura {
+        display: none
+      }
+
+      body {
+        cursor: auto
+      }
+    }
+
+    /* ================================================
+   BACKGROUND
+================================================ */
+    .bg-orbs {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(130px);
+      opacity: .14;
+      animation: fOrb 20s ease-in-out infinite
+    }
+
+    .o1 {
+      width: 700px;
+      height: 700px;
+      background: var(--cyan);
+      top: -250px;
+      left: -200px;
+      animation-duration: 22s
+    }
+
+    .o2 {
+      width: 500px;
+      height: 500px;
+      background: var(--indigo);
+      bottom: -150px;
+      right: -100px;
+      animation-duration: 26s;
+      animation-direction: reverse
+    }
+
+    .o3 {
+      width: 400px;
+      height: 400px;
+      background: var(--blue);
+      top: 35%;
+      left: 55%;
+      animation-duration: 18s;
+      animation-delay: -5s;
+      opacity: .09
+    }
+
+    .o4 {
+      width: 250px;
+      height: 250px;
+      background: var(--cyan);
+      bottom: 20%;
+      left: 8%;
+      animation-duration: 30s;
+      animation-delay: -10s;
+      opacity: .07
+    }
+
+    @keyframes fOrb {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1)
+      }
+
+      33% {
+        transform: translate(25px, -30px) scale(1.06)
+      }
+
+      66% {
+        transform: translate(-20px, 20px) scale(.96)
+      }
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .5;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(0, 194, 255, .024) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 194, 255, .024) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 20%, transparent 100%)
+    }
+
+    /* ================================================
+   LAYOUT
+================================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      position: relative;
+    }
+
+    /* ================================================
+   NAVBAR
+================================================ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 28px;
+      background: rgba(6, 9, 18, .65);
+      backdrop-filter: blur(20px) saturate(160%);
+      border-bottom: 1px solid var(--bd);
+      transition: background .3s, box-shadow .3s
+    }
+
+    .navbar.scrolled {
+      background: rgba(6, 9, 18, .92);
+      box-shadow: 0 1px 40px rgba(0, 0, 0, .5)
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: .15em;
+      color: #fff;
+      transition: transform .2s
+    }
+
+    .logo:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-hex {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 12px var(--cyan));
+    }
+
+    .logo-text {
+      background: linear-gradient(90deg, #fff, var(--text2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2px;
+      align-items: center
+    }
+
+    .nav-links a {
+      padding: 8px 15px;
+      border-radius: var(--r);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text2);
+      transition: color .2s, background .2s
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      background: rgba(0, 194, 255, .07)
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      border-radius: var(--r);
+      font-family: var(--font);
+      font-size: .875rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1.5px solid var(--bd3);
+      color: var(--cyan);
+      background: var(--cyan-d);
+      transition: all .25s
+    }
+
+    .btn-nav:hover {
+      background: rgba(0, 194, 255, .2);
+      box-shadow: 0 0 24px rgba(0, 194, 255, .3);
+      color: #fff
+    }
+
+    .ham {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none
+    }
+
+    .ham span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text2);
+      border-radius: 2px;
+      transition: all .3s
+    }
+
+    .ham.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg)
+    }
+
+    .ham.open span:nth-child(2) {
+      opacity: 0
+    }
+
+    .ham.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg)
+    }
+
+    .mob-menu {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px 20px 20px;
+      border-bottom: 1px solid var(--bd);
+      background: rgba(6, 9, 18, .75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .mob-menu.open {
+      display: flex
+    }
+
+    .mob-menu a {
+      padding: 12px 16px;
+      border-radius: var(--r);
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--text2);
+      transition: all .2s
+    }
+
+    .mob-menu a:hover {
+      color: var(--text);
+      background: rgba(0, 194, 255, .06)
+    }
+
+    .mob-menu .btn-nav {
+      margin-top: 8px;
+      justify-content: center
+    }
+
+    @media(max-width:768px) {
+
+      .nav-links,
+      .btn-nav {
+        display: none
+      }
+
+      .ham {
+        display: flex
+      }
+
+      .hero-bg::after {
+        background: rgba(6, 9, 18, 0.99);
+      }
+
+      .global-canvas {
+        opacity: 0.05;
+      }
+    }
+
+    /* ================================================
+   HERO
+================================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: url('hero_tech_brain_bg.png') center/cover no-repeat;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 9, 18, 0.93);
+      /* Darken base background */
+    }
+
+    .global-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.45;
+    }
+
+    .hero-glow {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(circle 600px at var(--hx, 50%) var(--hy, -10px), rgba(0, 194, 255, 0.45), transparent 70%);
+      mix-blend-mode: color-dodge;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 100px;
+      background: rgba(0, 194, 255, .08);
+      border: 1px solid rgba(0, 194, 255, .25);
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--cyan-l);
+      margin-bottom: 28px;
+      animation: fadeUp .7s ease both
+    }
+
+    .bdot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 8px var(--cyan);
+      animation: pulse 2s infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.5)
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5.5vw, 3.9rem);
+      font-weight: 800;
+      letter-spacing: -.035em;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 24px;
+      animation: fadeUp .7s .1s both
+    }
+
+    .grad {
+      background: linear-gradient(90deg, var(--cyan) 0%, var(--indigo-l) 55%, var(--blue-l) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .hero-lead {
+      font-size: 1.25rem;
+      color: var(--text2);
+      max-width: 680px;
+      line-height: 1.85;
+      margin-bottom: 40px;
+      animation: fadeUp .7s .2s both
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeUp .7s .3s both
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 30px;
+      border-radius: var(--r);
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      color: var(--bg);
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: none;
+      transition: all .25s;
+      box-shadow: 0 4px 24px rgba(0, 194, 255, .35)
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(0, 194, 255, .55), 0 0 80px rgba(0, 194, 255, .2)
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 28px;
+      border-radius: var(--r);
+      background: rgba(255, 255, 255, .04);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--bd2);
+      transition: all .25s
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 194, 255, .08);
+      border-color: var(--bd3);
+      transform: translateY(-2px)
+    }
+
+    .hero-stats {
+      display: flex;
+      margin-top: 72px;
+      flex-wrap: wrap;
+      animation: fadeUp .7s .4s both;
+      border: 1px solid var(--bd);
+      border-radius: var(--rl);
+      overflow: hidden;
+      background: rgba(255, 255, 255, .02);
+      backdrop-filter: blur(8px)
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 110px;
+      padding: 20px 22px;
+      text-align: center;
+      border-right: 1px solid var(--bd);
+      transition: background .2s
+    }
+
+    .stat:last-child {
+      border-right: none
+    }
+
+    .stat:hover {
+      background: rgba(0, 194, 255, .04)
+    }
+
+    .stat-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: #fff
+    }
+
+    .acc {
+      color: var(--cyan)
+    }
+
+    .stat-lbl {
+      font-size: .7rem;
+      color: var(--text3);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: 2px
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ================================================
+   MARQUEE
+================================================ */
+    .mq-sec {
+      padding: 48px 0;
+      border-top: 1px solid var(--bd);
+      border-bottom: 1px solid var(--bd);
+      overflow: hidden
+    }
+
+    .mq-label {
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .12em
+    }
+
+    .mq-wrap {
+      position: relative;
+      overflow: hidden
+    }
+
+    .mq-wrap::before,
+    .mq-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 130px;
+      z-index: 2
+    }
+
+    .mq-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--bg), transparent)
+    }
+
+    .mq-wrap::after {
+      right: 0;
+      background: linear-gradient(-90deg, var(--bg), transparent)
+    }
+
+    .mq-track {
+      display: flex;
+      gap: 12px;
+      width: max-content;
+      animation: mq 30s linear infinite
+    }
+
+    .mq-track:hover {
+      animation-play-state: paused
+    }
+
+    .mi {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 20px;
+      border-radius: var(--r);
+      border: 1px solid var(--bd);
+      background: rgba(255, 255, 255, .02);
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text3);
+      white-space: nowrap;
+      transition: all .2s
+    }
+
+    .mi:hover {
+      border-color: var(--bd2);
+      color: var(--text2)
+    }
+
+    .md {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%
+    }
+
+    @keyframes mq {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ================================================
+   TRUST BANNER
+================================================ */
+    .trust {
+      padding: 52px 0;
+      background: linear-gradient(180deg, rgba(0, 194, 255, .03), transparent);
+      border-bottom: 1px solid var(--bd)
+    }
+
+    .trust-lbl {
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .1em
+    }
+
+    .trust-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .tl {
+      flex: 1;
+      min-width: 100px;
+      max-width: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 18px;
+      opacity: .38;
+      transition: opacity .3s;
+      cursor: default;
+      position: relative
+    }
+
+    .tl:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 25%;
+      bottom: 25%;
+      width: 1px;
+      background: var(--bd)
+    }
+
+    .tl:hover {
+      opacity: 1
+    }
+
+    .tl-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      white-space: nowrap
+    }
+
+    .tl-icon {
+      font-size: 1.2rem
+    }
+
+    /* ================================================
+   SECTION HEADERS
+================================================ */
+    .sec-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 100px;
+      background: var(--cyan-d);
+      border: 1px solid rgba(0, 194, 255, .25);
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .sec-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 16px
+    }
+
+    .sec-sub {
+      font-size: 1.25rem;
+      color: var(--text2);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.8
+    }
+
+    .sec-hdr {
+      text-align: center;
+      margin-bottom: 64px
+    }
+
+    /* ================================================
+   REVEAL
+================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .75s ease, transform .75s ease
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* ================================================
+   CHALLENGE
+================================================ */
+    .challenge {
+      padding: 120px 0 80px
+    }
+
+    .ch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center
+    }
+
+    .ch-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 20px
+    }
+
+    .ch-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--cyan);
+      border-radius: 2px
+    }
+
+    .challenge h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: #fff;
+      line-height: 1.1
+    }
+
+    .ugrad {
+      position: relative;
+      display: inline
+    }
+
+    .ugrad::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--cyan), var(--indigo));
+      border-radius: 2px
+    }
+
+    .ch-right>p {
+      font-size: 1.2rem;
+      color: var(--text2);
+      line-height: 1.85;
+      margin-bottom: 28px
+    }
+
+    .ch-right>p strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    .cp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .cp {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: var(--r);
+      background: rgba(0, 194, 255, .03);
+      border: 1px solid var(--bd);
+      transition: all .2s
+    }
+
+    .cp:hover {
+      border-color: var(--bd2);
+      background: rgba(0, 194, 255, .06)
+    }
+
+    .cp-ico {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--cyan-d);
+      border: 1px solid rgba(0, 194, 255, .2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    .cp-t strong {
+      display: block;
+      font-size: .875rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px
+    }
+
+    .cp-t span {
+      font-size: .95rem;
+      color: var(--text3);
+      line-height: 1.6
+    }
+
+    /* ================================================
+   EXPERTISE STRIP
+================================================ */
+    .exp-strip {
+      padding: 60px 0
+    }
+
+    .strip {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid var(--bd);
+      border-radius: var(--rl);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: relative;
+      overflow: hidden
+    }
+
+    .strip::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--cyan), var(--indigo), transparent)
+    }
+
+    .exp-item {
+      text-align: center;
+      padding: 36px 20px;
+      position: relative;
+      transition: background .2s;
+      cursor: default
+    }
+
+    .exp-item:hover {
+      background: rgba(0, 194, 255, .04)
+    }
+
+    .exp-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background: var(--bd)
+    }
+
+    .exp-num {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: #fff
+    }
+
+    .exp-lbl {
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: 4px
+    }
+
+    .exp-ico {
+      font-size: 1.6rem;
+      margin-bottom: 10px
+    }
+
+    /* ================================================
+   SERVICES V2
+================================================ */
+    .svc-sec {
+      padding: 100px 0 120px
+    }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px
+    }
+
+    .svc-card {
+      background: rgba(0, 194, 255, .025);
+      border: 1px solid rgba(0, 194, 255, .08);
+      border-radius: var(--rl);
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .35s, border-color .35s, box-shadow .35s;
+      backdrop-filter: blur(10px);
+      cursor: default
+    }
+
+    .svc-card.c-c {
+      --cc: var(--cyan);
+      --cg: rgba(0, 194, 255, .13);
+      --cb: rgba(0, 194, 255, .4);
+      --cd: rgba(0, 194, 255, .08)
+    }
+
+    .svc-card.c-i {
+      --cc: var(--indigo-l);
+      --cg: rgba(99, 102, 241, .13);
+      --cb: rgba(99, 102, 241, .4);
+      --cd: rgba(99, 102, 241, .08)
+    }
+
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, var(--cg, rgba(0, 194, 255, .1)), transparent 70%);
+      opacity: 0;
+      transition: opacity .4s;
+      pointer-events: none
+    }
+
+    .svc-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--cb);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .5), 0 0 40px var(--cg)
+    }
+
+    .svc-card:hover::before {
+      opacity: 1
+    }
+
+    .svc-n {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--text3);
+      opacity: .5
+    }
+
+    .svc-ico {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cd);
+      border: 1px solid var(--cb);
+      margin-bottom: 22px
+    }
+
+    .svc-ico svg {
+      width: 26px;
+      height: 26px
+    }
+
+    .svc-card h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: -.02em
+    }
+
+    .svc-card>p {
+      font-size: 1.1rem;
+      color: var(--text2);
+      line-height: 1.8;
+      margin-bottom: 22px
+    }
+
+    .svc-div {
+      height: 1px;
+      background: rgba(255, 255, 255, .05);
+      margin-bottom: 18px
+    }
+
+    .svc-feats {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 22px
+    }
+
+    .svc-feat {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: .8rem;
+      color: var(--text2)
+    }
+
+    .svc-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--cc);
+      box-shadow: 0 0 6px var(--cc);
+      flex-shrink: 0
+    }
+
+    .svc-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--cc);
+      transition: gap .2s
+    }
+
+    .svc-card:hover .svc-cta {
+      gap: 10px
+    }
+
+    /* ================================================
+   CASES
+================================================ */
+    .cases {
+      padding: 0 0 120px
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .cc {
+      background: rgba(0, 194, 255, .02);
+      border: 1px solid rgba(0, 194, 255, .07);
+      border-radius: 18px;
+      padding: 30px 26px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+      backdrop-filter: blur(8px);
+      cursor: default
+    }
+
+    .cc.ci {
+      --ci: rgba(99, 102, 241, .12);
+      --cib: rgba(99, 102, 241, .4)
+    }
+
+    .cc::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      background: radial-gradient(circle at 0% 0%, rgba(0, 194, 255, .05), transparent 55%);
+      opacity: 0;
+      transition: opacity .3s
+    }
+
+    .cc.ci::before {
+      background: radial-gradient(circle at 0% 0%, var(--ci, rgba(0, 194, 255, .05)), transparent 55%)
+    }
+
+    .cc:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 194, 255, .35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .45), 0 0 30px rgba(0, 194, 255, .1)
+    }
+
+    .cc.ci:hover {
+      border-color: var(--cib);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .45), 0 0 30px rgba(99, 102, 241, .15)
+    }
+
+    .cc:hover::before {
+      opacity: 1
+    }
+
+    .cc-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 14px
+    }
+
+    .cc-row {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .cc-ico {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0
+    }
+
+    .ic0 {
+      background: rgba(0, 194, 255, .1);
+      border: 1px solid rgba(0, 194, 255, .2)
+    }
+
+    .ic1 {
+      background: rgba(99, 102, 241, .1);
+      border: 1px solid rgba(99, 102, 241, .2)
+    }
+
+    .ic2 {
+      background: rgba(59, 130, 246, .1);
+      border: 1px solid rgba(59, 130, 246, .2)
+    }
+
+    .ic3 {
+      background: rgba(20, 184, 166, .1);
+      border: 1px solid rgba(20, 184, 166, .2)
+    }
+
+    .ic4 {
+      background: rgba(14, 165, 233, .1);
+      border: 1px solid rgba(14, 165, 233, .2)
+    }
+
+    .ic5 {
+      background: rgba(139, 92, 246, .1);
+      border: 1px solid rgba(139, 92, 246, .2)
+    }
+
+    .cc h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff
+    }
+
+    .cc-sector {
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: .67rem;
+      font-weight: 700;
+      color: var(--text3);
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .08);
+      white-space: nowrap
+    }
+
+    .cc>p {
+      font-size: 1.05rem;
+      color: var(--text2);
+      line-height: 1.8;
+      margin-bottom: 18px
+    }
+
+    .cc-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, .05)
+    }
+
+    .cc-tags {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap
+    }
+
+    .ct {
+      font-size: .66rem;
+      font-weight: 600;
+      color: var(--text3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(255, 255, 255, .07)
+    }
+
+    .cc-arr {
+      color: var(--text3);
+      font-size: .9rem;
+      transition: color .2s, transform .2s
+    }
+
+    .cc:hover .cc-arr {
+      color: var(--cyan);
+      transform: translateX(4px)
+    }
+
+    .cc.ci:hover .cc-arr {
+      color: var(--indigo-l)
+    }
+
+    /* ================================================
+   PROCESS
+================================================ */
+    .process {
+      padding: 0 0 120px
+    }
+
+    .proc-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative
+    }
+
+    .proc-steps::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 12%;
+      right: 12%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--bd2), var(--bd2), transparent)
+    }
+
+    .step {
+      text-align: center;
+      padding: 0 10px
+    }
+
+    .step-n {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--surf);
+      border: 1px solid var(--bd2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin: 0 auto 20px;
+      box-shadow: 0 0 0 6px var(--bg);
+      position: relative;
+      z-index: 1
+    }
+
+    .step h4 {
+      font-size: .92rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px
+    }
+
+    .step p {
+      font-size: .95rem;
+      color: var(--text2);
+      line-height: 1.75
+    }
+
+    /* ================================================
+   TECH STACK
+================================================ */
+    .tech {
+      padding: 0 0 120px
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px
+    }
+
+    .ti {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid var(--bd);
+      border-radius: var(--r);
+      padding: 20px 10px;
+      text-align: center;
+      transition: all .2s;
+      cursor: default
+    }
+
+    .ti:hover {
+      border-color: var(--bd2);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 194, 255, .1)
+    }
+
+    .te {
+      font-size: 1.7rem;
+      margin-bottom: 8px
+    }
+
+    .tn {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--text3)
+    }
+
+    /* ================================================
+   TESTIMONIALS
+================================================ */
+    .testimonials {
+      padding: 0 0 120px
+    }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px
+    }
+
+    .test-card {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid var(--bd);
+      border-radius: var(--rl);
+      padding: 34px;
+      transition: all .3s
+    }
+
+    .test-card:hover {
+      border-color: var(--bd2);
+      transform: translateY(-3px)
+    }
+
+    .tn-big {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text3);
+      margin-bottom: 18px
+    }
+
+    .mstat-p {
+      font-size: 1.15rem;
+      color: var(--text2);
+      line-height: 1.8
+    }
+
+    .mstat-p strong {
+      color: var(--cyan-l);
+      font-weight: 700
+    }
+
+    .tmeta {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .tav {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan-d), var(--indigo-d));
+      border: 1px solid var(--bd2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem
+    }
+
+    .tname {
+      font-size: .85rem;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .trole {
+      font-size: .75rem;
+      color: var(--text3)
+    }
+
+    .tind {
+      margin-left: auto;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: .67rem;
+      font-weight: 600;
+      color: var(--text3);
+      background: var(--bg3);
+      border: 1px solid var(--bd)
+    }
+
+    /* ================================================
+   CONTACT — FormSubmit
+================================================ */
+    .contact {
+      padding: 80px 0 120px
+    }
+
+    .contact-wrap {
+      background: rgba(0, 194, 255, .02);
+      border: 1px solid var(--bd);
+      border-radius: var(--rl);
+      overflow: hidden;
+      position: relative
+    }
+
+    .contact-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--indigo))
+    }
+
+    .contact-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -180px;
+      right: -180px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 194, 255, .07), transparent 70%);
+      pointer-events: none
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0
+    }
+
+    .contact-left {
+      padding: 60px 56px;
+      border-right: 1px solid var(--bd);
+      position: relative;
+      z-index: 1
+    }
+
+    .contact-left h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.025em;
+      line-height: 1.25;
+      margin-bottom: 20px
+    }
+
+    .contact-left>p {
+      font-size: 1.18rem;
+      color: var(--text2);
+      line-height: 1.8;
+      margin-bottom: 36px
+    }
+
+    .ci-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    .ci-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .875rem;
+      color: var(--text2)
+    }
+
+    .ci-ico {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      flex-shrink: 0;
+      background: rgba(0, 194, 255, .06);
+      border: 1px solid var(--bd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .875rem
+    }
+
+    .ci-row a:hover {
+      color: var(--cyan)
+    }
+
+    .contact-right {
+      padding: 60px 48px;
+      position: relative;
+      z-index: 1
+    }
+
+    /* FORM */
+    .cform {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .f-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .fg {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative
+    }
+
+    .fg label {
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 8px
+    }
+
+    /* KEY STYLE: no side/top borders — bottom line only */
+    .fg input,
+    .fg textarea,
+    .fg select {
+      background: #0d1829;
+      border: none;
+      border-bottom: 1.5px solid rgba(0, 194, 255, .18);
+      border-radius: 0;
+      padding: 12px 4px;
+      color: var(--text);
+      font-family: var(--font);
+      font-size: .9rem;
+      outline: none;
+      width: 100%;
+      transition: border-color .25s, box-shadow .25s;
+      caret-color: var(--cyan)
+    }
+
+    .fg input::placeholder,
+    .fg textarea::placeholder {
+      color: var(--text3)
+    }
+
+    .fg input:focus,
+    .fg textarea:focus,
+    .fg select:focus {
+      border-bottom-color: var(--cyan);
+      box-shadow: 0 2px 0 -1px var(--cyan), 0 4px 12px rgba(0, 194, 255, .1)
+    }
+
+    .fg textarea {
+      resize: vertical;
+      min-height: 130px
+    }
+
+    .fg select option {
+      background: #0d1829
+    }
+
+    .fline {
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--indigo));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s ease;
+      margin-top: -2px
+    }
+
+    .fg:focus-within .fline {
+      transform: scaleX(1)
+    }
+
+    .btn-send {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px;
+      border-radius: var(--r);
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      color: var(--bg);
+      font-family: var(--font);
+      font-size: .95rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: none;
+      transition: all .3s;
+      box-shadow: 0 4px 20px rgba(0, 194, 255, .3);
+      position: relative;
+      overflow: hidden
+    }
+
+    .btn-send::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, .25), transparent 65%);
+      transform: scale(0);
+      opacity: 0;
+      transition: transform .5s, opacity .5s;
+      border-radius: inherit
+    }
+
+    .btn-send:hover {
+      box-shadow: 0 8px 40px rgba(0, 194, 255, .55), 0 0 80px rgba(0, 194, 255, .2);
+      transform: translateY(-2px)
+    }
+
+    .btn-send:active::after {
+      transform: scale(4);
+      opacity: 1;
+      transition: none
+    }
+
+    /* ================================================
+   FOOTER
+================================================ */
+    footer {
+      border-top: 1px solid var(--bd);
+      padding: 40px 0 28px;
+      position: relative;
+      z-index: 1
+    }
+
+    .ft-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 32px
+    }
+
+    .ft-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px
+    }
+
+    .ft-brand .logo {
+      margin-bottom: 14px
+    }
+
+    .ft-brand p {
+      font-size: .83rem;
+      color: var(--text3);
+      line-height: 1.75;
+      max-width: 260px
+    }
+
+    .ft-col h5 {
+      font-size: .68rem;
+      font-weight: 700;
+      color: var(--text2);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 14px
+    }
+
+    .ft-col a {
+      display: block;
+      font-size: .83rem;
+      color: var(--text3);
+      padding: 4px 0;
+      transition: color .2s
+    }
+
+    .ft-col a:hover {
+      color: var(--cyan)
+    }
+
+    .ft-bot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid var(--bd);
+      font-size: .78rem;
+      color: var(--text3)
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid var(--bd);
+      font-size: .72rem;
+      color: var(--text3)
+    }
+
+    .ldot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22C55E;
+      box-shadow: 0 0 6px #22C55E;
+      animation: pulse 2s infinite
+    }
+
+    /* ================================================
+   RESPONSIVE
+================================================ */
+    @media(max-width:1024px) {
+      .ch-grid {
+        grid-template-columns: 1fr;
+        gap: 52px
+      }
+
+      .svc-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .cases-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .strip {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .exp-item:nth-child(2)::after {
+        display: none
+      }
+
+      .tech-grid {
+        grid-template-columns: repeat(4, 1fr)
+      }
+
+      .ft-top {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .contact-inner {
+        grid-template-columns: 1fr
+      }
+
+      .contact-left {
+        border-right: none;
+        border-bottom: 1px solid var(--bd);
+        padding: 40px 36px
+      }
+
+      .contact-right {
+        padding: 40px 36px
+      }
+    }
+
+    @media(max-width:768px) {
+      .hero {
+        padding: 130px 0 80px
+      }
+
+      .hero-bg {
+        opacity: 0;
+      }
+
+      .hero-bg::after {
+        background: rgba(6, 9, 18, 0.99);
+      }
+
+      .hero-stats,
+      .exp-strip,
+      .tech {
+        display: none;
+      }
+
+      .global-canvas {
+        opacity: 0.15;
+      }
+
+      .hero-stats {
+        flex-direction: column
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid var(--bd)
+      }
+
+      .stat:last-child {
+        border-bottom: none
+      }
+
+      .svc-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cases-grid {
+        grid-template-columns: 1fr
+      }
+
+      .test-grid {
+        grid-template-columns: 1fr
+      }
+
+      .strip {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .exp-item::after,
+      .exp-item:nth-child(2)::after {
+        display: none
+      }
+
+      .tech-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .proc-steps {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .proc-steps::before {
+        display: none
+      }
+
+      .ft-top {
+        grid-template-columns: 1fr
+      }
+
+      .f-row {
+        grid-template-columns: 1fr
+      }
+
+      .contact-left,
+      .contact-right {
+        padding: 32px 24px
+      }
+
+      .tl:not(:last-child)::after {
+        display: none
+      }
+
+      .tl {
+        min-width: 80px
+      }
+    }
+
+    @media(max-width:480px) {
+      .container {
+        padding: 0 18px
+      }
+
+      .hero h1 {
+        font-size: 2rem
+      }
+
+      .hero-ctas {
+        flex-direction: column
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        justify-content: center;
+        width: 100%
+      }
+
+      .svc-card {
+        padding: 28px 22px
+      }
+
+      .cc {
+        padding: 24px 20px
+      }
+
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .strip {
+        grid-template-columns: 1fr
+      }
+
+      .exp-item::after {
+        display: none
+      }
+    }
+
+    /* NEW SECTIONS STYLES */
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .vs-card {
+      padding: 32px;
+      border-radius: var(--rl);
+      border: 1px solid var(--bd);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .vs-card.bad {
+      border-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .vs-card.good {
+      border-color: rgba(16, 185, 129, 0.2);
+      background: rgba(16, 185, 129, 0.03);
+    }
+
+    .vs-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .vs-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .vs-list li {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: var(--text3);
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .vs-list li::before {
+      content: '✕';
+      position: absolute;
+      left: 0;
+      color: #ef4444;
+    }
+
+    .vs-card.good .vs-list li::before {
+      content: '✓';
+      color: #10b981;
+    }
+
+    .ind-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .ind-card {
+      padding: 24px;
+      border-radius: var(--r);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--bd);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .ind-card:hover {
+      background: rgba(0, 194, 255, 0.05);
+      border-color: var(--cyan);
+      transform: translateY(-5px);
+    }
+
+    .ind-ico {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .ind-card h4 {
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    @media(max-width: 768px) {
+
+      .vs-grid,
+      .ind-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* SUCCESS OVERLAY */
+    .form-success-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(6, 9, 18, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      padding: 20px;
+    }
+
+    .form-success-overlay.in {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .success-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--bd);
+      padding: 40px;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 400px;
+      transform: translateY(20px);
+      transition: transform 0.4s ease;
+    }
+
+    .form-success-overlay.in .success-box {
+      transform: translateY(0);
+    }
+
+    .success-ico {
+      width: 60px;
+      height: 60px;
+      background: var(--cyan);
+      color: var(--bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 30px var(--cyan-g);
+    }
+
+    .success-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .success-box p {
+      color: var(--text2);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    /* ================================================
+       ENHANCEMENTS — CONVERSION & SCHEDULING
+    ================================================ */
+    .cta-microcopy {
+      font-size: .78rem; color: var(--text3);
+      margin-top: 10px; display: flex; align-items: center;
+      gap: 6px; flex-wrap: wrap;
+    }
+    .cta-microcopy .pulse-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #22C55E; box-shadow: 0 0 8px #22C55E;
+      animation: pulse 2s infinite; flex-shrink: 0;
+    }
+    /* Floating CTA widget */
+    .sched-widget {
+      position: fixed; bottom: 28px; right: 28px; z-index: 2000;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+      opacity: 0; pointer-events: none;
+      transition: opacity .4s ease, transform .4s ease;
+      transform: translateY(20px);
+    }
+    .sched-widget.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .sched-badge {
+      background: rgba(34,197,94,.15); border: 1px solid rgba(34,197,94,.4);
+      color: #22C55E; border-radius: 100px; padding: 4px 12px;
+      font-size: .72rem; font-weight: 700; display: flex; align-items: center; gap: 5px;
+    }
+    .sched-bubble {
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      color: var(--bg); border: none; border-radius: 50px;
+      padding: 14px 24px; font-family: var(--font); font-weight: 800;
+      font-size: .875rem; cursor: pointer; white-space: nowrap;
+      box-shadow: 0 8px 32px rgba(0,194,255,.5);
+      animation: floatCTA 3s ease-in-out infinite;
+      display: flex; align-items: center; gap: 8px; transition: all .3s;
+    }
+    .sched-bubble:hover { transform: scale(1.04); box-shadow: 0 16px 50px rgba(0,194,255,.7); }
+    @keyframes floatCTA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+    /* Scheduling modal */
+    .sched-modal-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(6,9,18,.95); backdrop-filter: blur(20px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity .4s; padding: 20px;
+    }
+    .sched-modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .sched-modal {
+      background: var(--surf); border: 1px solid var(--bd2);
+      border-radius: 24px; padding: 48px; max-width: 560px; width: 100%;
+      position: relative; transform: translateY(30px);
+      transition: transform .4s; max-height: 90vh; overflow-y: auto;
+    }
+    .sched-modal-overlay.open .sched-modal { transform: translateY(0); }
+    .sched-modal::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--cyan), var(--indigo));
+      border-radius: 24px 24px 0 0;
+    }
+    .sched-close {
+      position: absolute; top: 20px; right: 20px;
+      background: rgba(255,255,255,.06); border: 1px solid var(--bd);
+      color: var(--text2); width: 36px; height: 36px; border-radius: 50%;
+      cursor: pointer; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center; transition: all .2s;
+    }
+    .sched-close:hover { background: rgba(255,255,255,.12); color: #fff; }
+    .sched-modal h3 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 8px; letter-spacing: -.02em; }
+    .sched-modal .sched-sub { font-size: 1rem; color: var(--text2); margin-bottom: 28px; line-height: 1.7; }
+    .sched-slots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+    .sched-slot {
+      background: rgba(0,194,255,.05); border: 1.5px solid var(--bd);
+      border-radius: var(--r); padding: 14px; cursor: pointer;
+      transition: all .2s; text-align: center;
+    }
+    .sched-slot:hover, .sched-slot.selected { border-color: var(--cyan); background: rgba(0,194,255,.12); }
+    .slot-day { font-size: .78rem; color: var(--text3); font-weight: 600; }
+    .slot-time { font-size: .95rem; color: #fff; font-weight: 700; margin-top: 2px; }
+    .sched-confirm {
+      width: 100%; padding: 16px; border-radius: var(--r);
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      color: var(--bg); font-family: var(--font); font-weight: 800;
+      font-size: 1rem; border: none; cursor: pointer; transition: all .3s;
+      box-shadow: 0 4px 20px rgba(0,194,255,.3);
+    }
+    .sched-confirm:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(0,194,255,.55); }
+    .sched-guarantee {
+      display: flex; align-items: center; gap: 6px;
+      margin-top: 14px; font-size: .75rem; color: var(--text3); justify-content: center;
+    }
+    @media(max-width:560px) {
+      .sched-modal { padding: 28px 20px; }
+      .sched-slots { grid-template-columns: 1fr; }
+      .sched-widget { bottom: 16px; right: 16px; }
+      .sched-bubble { padding: 12px 18px; font-size: .82rem; }
+    }
+
+    /* ================================================
+       IMPACT FINANCIAL BANNER
+    ================================================ */
+    .impact-banner {
+      padding: 80px 0;
+      border-top: 1px solid rgba(239,68,68,.1);
+      border-bottom: 1px solid rgba(239,68,68,.1);
+      background: linear-gradient(180deg, rgba(239,68,68,.02), transparent 50%, rgba(245,158,11,.02));
+    }
+    .impact-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: rgba(255,255,255,.05);
+      border-radius: var(--rl); overflow: hidden;
+    }
+    .impact-item {
+      background: var(--bg); padding: 40px 28px; text-align: center; transition: background .3s;
+    }
+    .impact-item:hover { background: rgba(239,68,68,.03); }
+    .impact-num {
+      font-size: 2.8rem; font-weight: 800; letter-spacing: -.04em; margin-bottom: 8px; line-height: 1;
+    }
+    .impact-num.red { color: #ef4444; text-shadow: 0 0 40px rgba(239,68,68,.4); }
+    .impact-num.amber { color: #f59e0b; text-shadow: 0 0 40px rgba(245,158,11,.4); }
+    .impact-num.cyan { color: var(--cyan); text-shadow: 0 0 40px rgba(0,194,255,.4); }
+    .impact-label { font-size: .9rem; color: var(--text2); font-weight: 600; line-height: 1.5; }
+    .impact-sub { font-size: .75rem; color: var(--text3); margin-top: 6px; line-height: 1.5; }
+    @media(max-width:768px) { .impact-grid { grid-template-columns: 1fr; } }
+
+    /* ================================================
+       CALCULADORA DE IMPACTO
+    ================================================ */
+    .calc-section { padding: 100px 0; border-bottom: 1px solid var(--bd); }
+    .calc-wrap {
+      background: rgba(0,194,255,.02); border: 1px solid var(--bd2);
+      border-radius: var(--rl); padding: 52px; position: relative; overflow: hidden;
+    }
+    .calc-wrap::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--indigo));
+    }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .calc-inputs h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 8px; letter-spacing: -.02em; }
+    .calc-inputs > p { font-size: .95rem; color: var(--text2); margin-bottom: 32px; line-height: 1.7; }
+    .calc-field { margin-bottom: 28px; }
+    .calc-field label {
+      display: block; font-size: .7rem; font-weight: 700; color: var(--text3);
+      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 12px;
+    }
+    .calc-field input[type=range] {
+      width: 100%; -webkit-appearance: none; appearance: none;
+      height: 4px; border-radius: 2px; background: var(--surf3); outline: none; cursor: pointer;
+    }
+    .calc-field input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      box-shadow: 0 0 12px rgba(0,194,255,.5); cursor: pointer; border: none;
+    }
+    .range-val { display: flex; justify-content: space-between; margin-top: 8px; font-size: .78rem; color: var(--text3); }
+    .range-cur { color: var(--cyan); font-weight: 700; }
+    .calc-results { position: sticky; top: 100px; }
+    .calc-results > h3 {
+      font-size: .8rem; font-weight: 700; color: var(--text3);
+      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 20px;
+    }
+    .calc-metric {
+      background: rgba(0,194,255,.04); border: 1px solid var(--bd);
+      border-radius: var(--r); padding: 20px 24px; margin-bottom: 12px; transition: all .3s;
+    }
+    .calc-metric:hover { border-color: var(--bd2); }
+    .cm-label { font-size: .72rem; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+    .cm-value { font-size: 1.9rem; font-weight: 800; letter-spacing: -.025em; transition: all .5s; color: var(--cyan); }
+    .calc-metric.danger .cm-value { color: #ef4444; }
+    .calc-metric.warning .cm-value { color: #f59e0b; }
+    .calc-metric.success .cm-value { color: #22c55e; }
+    .cm-sub { font-size: .78rem; color: var(--text3); margin-top: 4px; line-height: 1.5; }
+    .calc-cta-wrap {
+      margin-top: 24px; padding: 20px; background: rgba(0,194,255,.04);
+      border: 1px solid var(--bd2); border-radius: var(--r); text-align: center;
+    }
+    .calc-cta-wrap p { font-size: .88rem; color: var(--text2); margin-bottom: 14px; line-height: 1.6; }
+    .btn-calc-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 14px 20px; border-radius: var(--r);
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      color: var(--bg); font-family: var(--font); font-weight: 800;
+      font-size: .9rem; border: none; cursor: pointer; transition: all .3s;
+      box-shadow: 0 4px 20px rgba(0,194,255,.3); text-decoration: none;
+    }
+    .btn-calc-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(0,194,255,.55); }
+    @media(max-width:768px) { .calc-grid { grid-template-columns: 1fr; gap: 32px; } .calc-results { position: static; } .calc-wrap { padding: 28px 22px; } }
+
+    /* ================================================
+       FRASES FINANCIERAS ESTRATÉGICAS
+    ================================================ */
+    .fin-strip { padding: 60px 0; overflow: hidden; border-bottom: 1px solid var(--bd); }
+    .fin-strip-inner {
+      display: flex; gap: 24px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px;
+    }
+    .fin-strip-inner::-webkit-scrollbar { display: none; }
+    .fin-quote {
+      flex-shrink: 0; max-width: 310px; background: rgba(0,194,255,.03);
+      border: 1px solid var(--bd); border-radius: var(--rl); padding: 28px 26px;
+      position: relative; transition: all .3s; cursor: default;
+    }
+    .fin-quote:hover { border-color: var(--bd2); transform: translateY(-4px); }
+    .fin-quote .fq-ico { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    .fin-quote p { font-size: .95rem; color: var(--text2); line-height: 1.75; }
+    .fin-quote p strong { color: var(--cyan); }
+
+    /* ================================================
+       TESTIMONIOS MEJORADOS
+    ================================================ */
+    .test-card-v2 {
+      background: rgba(255,255,255,.02); border: 1px solid var(--bd);
+      border-radius: var(--rl); padding: 36px; transition: all .3s; position: relative; overflow: hidden;
+    }
+    .test-card-v2::before {
+      content: '"'; position: absolute; top: 10px; left: 20px;
+      font-size: 5rem; color: var(--cyan); opacity: .07; font-family: Georgia,serif; line-height: 1;
+    }
+    .test-card-v2:hover { border-color: var(--bd2); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+    .test-stars { display: flex; gap: 3px; margin-bottom: 16px; color: #F59E0B; font-size: .9rem; }
+    .test-quote { font-size: 1.05rem; color: var(--text2); line-height: 1.8; margin-bottom: 24px; }
+    .test-quote strong { color: var(--cyan-l); font-weight: 700; }
+    .test-meta { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.05); }
+    .test-avatar {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--cyan-d), var(--indigo-d));
+      border: 1.5px solid var(--bd2); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+    .test-name { font-size: .9rem; font-weight: 700; color: #fff; }
+    .test-role { font-size: .75rem; color: var(--text3); margin-top: 1px; }
+    .test-company-badge {
+      margin-left: auto; padding: 4px 12px; border-radius: 100px;
+      font-size: .68rem; font-weight: 700; color: var(--cyan);
+      background: var(--cyan-d); border: 1px solid rgba(0,194,255,.2); white-space: nowrap;
+    }
+
+    /* ================================================
+       LEAD MAGNETS
+    ================================================ */
+    .leadmag-section { padding: 80px 0; border-bottom: 1px solid var(--bd); }
+    .leadmag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .leadmag-card {
+      background: rgba(0,194,255,.025); border: 1px solid var(--bd);
+      border-radius: var(--rl); padding: 36px; display: flex;
+      flex-direction: column; gap: 14px; transition: all .35s; position: relative; overflow: hidden;
+    }
+    .leadmag-card::after {
+      content: ''; position: absolute; bottom: -60px; right: -60px;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, rgba(0,194,255,.08), transparent 70%); pointer-events: none;
+    }
+    .leadmag-card:hover { border-color: var(--bd2); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+    .lm-tag {
+      display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px;
+      border-radius: 100px; font-size: .68rem; font-weight: 700;
+      color: #22C55E; background: rgba(34,197,94,.1); border: 1px solid rgba(34,197,94,.25); width: fit-content;
+    }
+    .lm-ico { font-size: 2.2rem; }
+    .leadmag-card h3 { font-size: 1.2rem; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+    .leadmag-card > p { font-size: .95rem; color: var(--text2); line-height: 1.75; flex: 1; }
+    .lm-form { display: flex; gap: 10px; margin-top: 4px; }
+    .lm-form input {
+      flex: 1; background: rgba(255,255,255,.05); border: 1px solid var(--bd);
+      border-radius: var(--r); padding: 11px 16px; color: #fff;
+      font-family: var(--font); font-size: .875rem; outline: none; transition: border-color .2s;
+    }
+    .lm-form input:focus { border-color: var(--cyan); }
+    .lm-form input::placeholder { color: var(--text3); }
+    .lm-btn {
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      color: var(--bg); border: none; border-radius: var(--r);
+      padding: 11px 18px; font-family: var(--font); font-weight: 700;
+      font-size: .85rem; cursor: pointer; white-space: nowrap; transition: all .25s;
+    }
+    .lm-btn:hover { box-shadow: 0 4px 20px rgba(0,194,255,.4); transform: translateY(-1px); }
+    .lm-disclaimer { font-size: .7rem; color: var(--text3); }
+    @media(max-width:768px) { .leadmag-grid { grid-template-columns: 1fr; } .lm-form { flex-direction: column; } }
+
+    /* ================================================
+       TRUST LOGOS V2 SYMMETRIC
+    ================================================ */
+    .trust-logos-v2 {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    }
+    .tl-v2 {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 16px 18px; background: rgba(255,255,255,.02);
+      border: 1px solid var(--bd); border-radius: var(--r);
+      opacity: .45; transition: all .3s; cursor: default;
+    }
+    .tl-v2:hover { opacity: 1; border-color: var(--bd2); background: rgba(0,194,255,.04); transform: translateY(-2px); }
+    .tl-v2 .tl-name { font-weight: 700; font-size: .88rem; color: #fff; }
+    @media(max-width:768px) { .trust-logos-v2 { grid-template-columns: repeat(2, 1fr); } }
+
+    /* ================================================
+       PRIMARY DIAG BUTTON
+    ================================================ */
+    .btn-primary-diag {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 32px; border-radius: var(--r);
+      background: linear-gradient(135deg, var(--cyan), var(--blue-l));
+      color: var(--bg); font-family: var(--font); font-size: 1rem;
+      font-weight: 800; cursor: pointer; border: none; transition: all .25s;
+      box-shadow: 0 6px 28px rgba(0,194,255,.4); text-decoration: none;
+    }
+    .btn-primary-diag:hover { transform: translateY(-2px); box-shadow: 0 10px 44px rgba(0,194,255,.6), 0 0 80px rgba(0,194,255,.2); }
+
+    /* ================================================
+       MOBILE SCROLL GLOW (FASE 7)
+    ================================================ */
+    @media(pointer:coarse) {
+      section.section-glow { position: relative; }
+      section.section-glow::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(0,194,255,.06), transparent 60%);
+        pointer-events: none; z-index: 0; opacity: 0;
+        animation: glowIn .6s ease forwards;
+      }
+      @keyframes glowIn { to { opacity: 1; } }
+      .svc-card, .cc, .test-card-v2, .leadmag-card, .calc-metric {
+        transition: opacity .5s ease, transform .5s ease, border-color .3s, box-shadow .3s;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom cursor (desktop only) -->
+  <div id="c-dot"></div>
+  <div id="c-ring"></div>
+  <div id="c-aura"></div>
+
+  <main>
+    <!-- Ambient orbs -->
+    <div class="bg-orbs">
+      <div class="orb o1"></div>
+      <div class="orb o2"></div>
+      <div class="orb o3"></div>
+      <div class="orb o4"></div>
+    </div>
+
+    <!-- ========================================================
+     NAVBAR
+======================================================== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#inicio" class="logo" aria-label="OpenCORE Consulting - Ir al inicio">
+          <svg class="logo-hex" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-labelledby="logoTitle">
+            <title id="logoTitle">Logotipo de OpenCORE</title>
+            <path d="M20 5L32.9867 12.5V27.5L20 35L7.01325 27.5V12.5L20 5Z" stroke="var(--cyan)" stroke-width="2" />
+            <path d="M20 12L26.9282 16V24L20 28L13.0718 24V16L20 12Z" fill="var(--cyan)" opacity="0.3" />
+            <circle cx="20" cy="20" r="3" fill="var(--cyan)" />
+            <path d="M20 12L26.9282 16M26.9282 24L20 28M13.0718 24L20 28M13.0718 16L20 12" stroke="var(--cyan)"
+              stroke-width="1.5" stroke-opacity="0.5" />
+          </svg>
+          <span class="logo-text">OPENCORE</span>
+        </a>
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#quienes-somos">Quiénes Somos</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <a href="#contacto" class="btn-nav" onclick="openSched(event)">🔍 Diagnóstico gratuito</a>
+        <button class="ham" id="ham" aria-label="Menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mob-menu" id="mob-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes-somos">Quiénes Somos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="btn-nav" onclick="openSched(event)">🔍 Diagnóstico gratuito</a>
+      </div>
+    </nav>
+
+    <!-- ========================================================
+     HERO
+======================================================== -->
+    <canvas id="global-canvas" class="global-canvas"></canvas>
+
+    <section class="hero" id="inicio">
+      <div class="hero-bg"></div>
+      <div class="hero-glow"></div>
+      <div class="container">
+        <div class="badge">
+          <div class="bdot"></div>⭐ Más de 25 años de experiencia Enterprise
+        </div>
+
+        <h1>Protegemos su operación e incrementamos la <span class="grad">rentabilidad mediante ingeniería</span> de
+          modernización estratégica.</h1>
+
+        <p class="hero-lead">Cada día sin control de inventario es <strong style="color:var(--text)">capital inmovilizado</strong>. Cada sistema desconectado es una fuga de rentabilidad. OpenCORE elimina la deuda tecnológica que destruye su margen — sin detener su producción.</p>
+        <div class="cta-microcopy">
+          <span class="pulse-dot"></span>
+          <span>30 minutos para detectar pérdidas operativas ocultas en su operación</span>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#contacto" class="btn-primary-diag">📅 Agenda un diagnóstico técnico inmediato</a>
+          <a href="#servicios" class="btn-secondary">Ver servicios →</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num" data-target="25" data-suf="+">25<span class="acc">+</span></div>
+            <div class="stat-lbl">Años de experiencia</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="120" data-suf="+">120<span class="acc">+</span></div>
+            <div class="stat-lbl">Proyectos entregados</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="40" data-suf="+">40<span class="acc">+</span></div>
+            <div class="stat-lbl">Clientes enterprise</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-pre="+" data-target="30" data-suf="%">+30<span class="acc">%</span></div>
+            <div class="stat-lbl">Eficiencia Operativa</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     MARQUEE
+======================================================== -->
+    <section class="mq-sec">
+      <div class="container">
+        <p class="mq-label">Tecnologías y plataformas con las que trabajamos</p>
+      </div>
+      <div class="mq-wrap">
+        <div class="mq-track" aria-hidden="true">
+          <div class="mi"><span class="md" style="background:#f89820"></span>Java Enterprise</div>
+          <div class="mi"><span class="md" style="background:#3b82f6"></span>Python / FastAPI</div>
+          <div class="mi"><span class="md" style="background:#0ea5e9"></span>COBOL</div>
+          <div class="mi"><span class="md" style="background:#6366f1"></span>Oracle / SQL</div>
+          <div class="mi"><span class="md" style="background:#ef4444"></span>ESMART</div>
+          <div class="mi"><span class="md" style="background:#10b981"></span>C / C++</div>
+          <div class="mi"><span class="md" style="background:#8b5cf6"></span>PHP</div>
+          <div class="mi"><span class="md" style="background:#22c55e"></span>Spring Boot</div>
+          <div class="mi"><span class="md" style="background:#2563eb"></span>Microservicios</div>
+          <div class="mi"><span class="md" style="background:#00c2ff"></span>n8n / IA</div>
+          <div class="mi"><span class="md" style="background:#f89820"></span>NestJS</div>
+
+          <div class="mi"><span class="md" style="background:#f89820"></span>Java Enterprise</div>
+          <div class="mi"><span class="md" style="background:#3b82f6"></span>Python / FastAPI</div>
+          <div class="mi"><span class="md" style="background:#0ea5e9"></span>COBOL</div>
+          <div class="mi"><span class="md" style="background:#6366f1"></span>Oracle / SQL</div>
+          <div class="mi"><span class="md" style="background:#ef4444"></span>ESMART</div>
+          <div class="mi"><span class="md" style="background:#10b981"></span>C / C++</div>
+          <div class="mi"><span class="md" style="background:#8b5cf6"></span>PHP</div>
+          <div class="mi"><span class="md" style="background:#22c55e"></span>Spring Boot</div>
+          <div class="mi"><span class="md" style="background:#2563eb"></span>Microservicios</div>
+          <div class="mi"><span class="md" style="background:#00c2ff"></span>n8n / IA</div>
+          <div class="mi"><span class="md" style="background:#f89820"></span>NestJS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     TRUST BANNER
+======================================================== -->
+    <section class="trust">
+      <div class="container">
+        <p class="trust-lbl">Empresas líderes que confían en nuestra ingeniería:</p>
+        <div class="trust-logos-v2">
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+            <span class="tl-name">ONU</span>
+          </div>
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.47c-.31.17-.69.17-1 0l-7.97-4.47c-.32-.17-.53-.5-.53-.88V7.5c0-.38.21-.71.53-.88l7.97-4.47c.31-.17.69-.17 1 0l7.97 4.47c.32.17.53.5.53.88v9z"/></svg>
+            <span class="tl-name">COCHA</span>
+          </div>
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            <span class="tl-name">Nestlé</span>
+          </div>
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-5.33 0-8 2.67-8 8 0 5.33 2.67 8 8 8s8-2.67 8-8c0-5.33-2.67-8-8-8zm0 14c-3.31 0-5.33-1.33-5.33-4.67 0-3.34 2.02-4.67 5.33-4.67s5.33 1.33 5.33 4.67c0 3.34-2.02 4.67-5.33 4.67z"/></svg>
+            <span class="tl-name">Aguas Andinas</span>
+          </div>
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L2 22M2 2l20 20"/></svg>
+            <span class="tl-name">Finning</span>
+          </div>
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4V4z"/></svg>
+            <span class="tl-name">Komatsu</span>
+          </div>
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span class="tl-name">Tesa</span>
+          </div>
+          <div class="tl-v2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            <span class="tl-name">Beiersdorf</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+     IMPACTO FINANCIERO — COSTO DE LA INACCIÓN
+    ============================================================ -->
+    <section class="impact-banner reveal" id="impacto">
+      <div class="container">
+        <div class="sec-hdr" style="margin-bottom:48px">
+          <div class="sec-tag">El Costo Real de la Inacción</div>
+          <h2 class="sec-title">No modernizar cuesta dinero<br><span class="grad">todos los días.</span></h2>
+          <p class="sec-sub">El inventario no controlado no es un problema técnico — es un problema financiero.</p>
+        </div>
+        <div class="impact-grid reveal">
+          <div class="impact-item">
+            <div class="impact-num red">28%</div>
+            <div class="impact-label">Tiempo operativo perdido</div>
+            <div class="impact-sub">Sistemas desconectados = millones en capital inmovilizado</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-num amber">35%</div>
+            <div class="impact-label">Capital atrapado en inventario ineficiente</div>
+            <div class="impact-sub">Cada repuesto inmovilizado es capital muerto sin retorno</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-num cyan">−30%</div>
+            <div class="impact-label">Reducción de costos con OpenCORE</div>
+            <div class="impact-sub">Promedio en clientes integrados durante los primeros 6 meses</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     CALCULADORA DE IMPACTO FINANCIERO
+    ============================================================ -->
+    <section class="calc-section" id="calculadora">
+      <div class="container">
+        <div class="sec-hdr reveal" style="margin-bottom:48px">
+          <div class="sec-tag">Calculadora de Impacto</div>
+          <h2 class="sec-title">¿Cuánto le cuesta<br><span class="grad">su ineficiencia hoy?</span></h2>
+          <p class="sec-sub">Configure su escenario y vea el costo real de mantener sus sistemas actuales.</p>
+        </div>
+        <div class="calc-wrap reveal">
+          <div class="calc-grid">
+            <div class="calc-inputs">
+              <h3>Configure su operación</h3>
+              <p>Ajuste los valores según su empresa para ver el impacto financiero estimado de su situación actual.</p>
+              <div class="calc-field">
+                <label>Inventario total en activos (USD)</label>
+                <input type="range" id="calcInv" min="100000" max="10000000" step="100000" value="2000000">
+                <div class="range-val"><span>$100K</span><span class="range-cur" id="vInv">$2,000,000</span><span>$10M</span></div>
+              </div>
+              <div class="calc-field">
+                <label>% de ineficiencia estimada en inventario</label>
+                <input type="range" id="calcIne" min="5" max="40" step="1" value="15">
+                <div class="range-val"><span>5%</span><span class="range-cur" id="vIne">15%</span><span>40%</span></div>
+              </div>
+              <div class="calc-field">
+                <label>% de tiempo operativo perdido por sistemas</label>
+                <input type="range" id="calcTie" min="5" max="35" step="1" value="20">
+                <div class="range-val"><span>5%</span><span class="range-cur" id="vTie">20%</span><span>35%</span></div>
+              </div>
+              <div class="calc-field">
+                <label>Costo mensual de operaciones (USD)</label>
+                <input type="range" id="calcCos" min="50000" max="5000000" step="50000" value="500000">
+                <div class="range-val"><span>$50K</span><span class="range-cur" id="vCos">$500,000</span><span>$5M</span></div>
+              </div>
+            </div>
+            <div class="calc-results">
+              <h3>📊 Impacto financiero estimado</h3>
+              <div class="calc-metric danger">
+                <div class="cm-label">💀 Capital inmovilizado en inventario</div>
+                <div class="cm-value" id="rCap">$300,000</div>
+                <div class="cm-sub">Activos que no generan retorno por falta de control</div>
+              </div>
+              <div class="calc-metric warning">
+                <div class="cm-label">⏰ Costo mensual de tiempo perdido</div>
+                <div class="cm-value" id="rTie">$100,000</div>
+                <div class="cm-sub">Por procesos manuales y sistemas desconectados</div>
+              </div>
+              <div class="calc-metric danger">
+                <div class="cm-label">📉 Pérdida anual estimada total</div>
+                <div class="cm-value" id="rAnu">$1,500,000</div>
+                <div class="cm-sub">Impacto acumulado de mantener el sistema actual</div>
+              </div>
+              <div class="calc-metric success">
+                <div class="cm-label">✅ Ahorro potencial con OpenCORE</div>
+                <div class="cm-value" id="rAho">$450,000</div>
+                <div class="cm-sub">Basado en resultados promedio de nuestros clientes (30%)</div>
+              </div>
+              <div class="calc-cta-wrap">
+                <p>Estos son estimados conservadores. Un diagnóstico real puede revelar mayor potencial de ahorro.</p>
+                <a href="#contacto" class="btn-calc-cta">📅 Solicitar diagnóstico exacto gratuito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     CHALLENGE / QUIÉNES SOMOS
+======================================================== -->
+    <section class="challenge" id="quienes-somos">
+      <div class="container">
+        <div class="ch-grid">
+          <div class="reveal">
+            <div class="ch-eyebrow">Nuestra propuesta de valor</div>
+            <h2>Modernización <span class="ugrad">estructural</span><br>sin riesgo para su<br>continuidad operativa.
+            </h2>
+          </div>
+          <div class="ch-right reveal">
+            <p>La obsolescencia tecnológica no es solo un problema de TI — <strong>es una fuga de capital constante.</strong> OpenCORE no vende software: protegemos su continuidad operacional, eliminamos capital inmovilizado en inventario y reducimos el riesgo tecnológico que destruye su rentabilidad cada día.</p>
+            <div class="cp-list">
+              <div class="cp">
+                <div class="cp-ico">🛡️</div>
+                <div class="cp-t"><strong>Continuidad operativa garantizada</strong><span>Migramos sin detener producción. Sin pérdida de capital durante la transición.</span></div>
+              </div>
+              <div class="cp">
+                <div class="cp-ico">🔐</div>
+                <div class="cp-t"><strong>Control financiero del inventario</strong><span>Visibilidad total de activos, trazabilidad de repuestos y eliminación de capital inmovilizado invisible.</span></div>
+              </div>
+              <div class="cp">
+                <div class="cp-ico">🚀</div>
+                <div class="cp-t"><strong>Reducción de riesgo tecnológico</strong><span>Protegemos su rentabilidad eliminando dependencias de sistemas críticos sin soporte ni continuidad garantizada.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     EXPERTISE STRIP
+======================================================== -->
+    <section class="exp-strip">
+      <div class="container">
+        <div class="strip reveal">
+          <div class="exp-item">
+            <div class="exp-ico">🏆</div>
+            <div class="exp-num">25<span class="acc">+</span></div>
+            <div class="exp-lbl">Años en el mercado</div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-ico">🚀</div>
+            <div class="exp-num">120<span class="acc">+</span></div>
+            <div class="exp-lbl">Proyectos entregados</div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-ico">🤝</div>
+            <div class="exp-num">40<span class="acc">+</span></div>
+            <div class="exp-lbl">Clientes enterprise</div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-ico">⚡</div>
+            <div class="exp-num" data-pre="+" data-target="30" data-suf="%">+30<span class="acc">%</span></div>
+            <div class="exp-lbl">Eficiencia Operativa</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     SERVICIOS
+======================================================== -->
+    <section class="testimonials" id="el-problema">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">El costo de la inacción</div>
+          <h2 class="sec-title">Su deuda técnica es una<br>pérdida de capital constante.</h2>
+          <p class="sec-sub">Ignorar la modernización estructural no es una opción de ahorro; es una decisión de pérdida
+            operativa. Las ineficiencias en la gestión de inventario de repuestos y sistemas heredados desconectados
+            destruyen su margen cada día.</p>
+        </div>
+
+        <div class="vs-grid reveal">
+          <div class="vs-card bad">
+            <h4 style="color:#ef4444">Sin Modernización</h4>
+            <ul class="vs-list">
+              <li>Pérdidas de inventario por falta de trazabilidad.</li>
+              <li>Tiempos muertos por sistemas que no se comunican.</li>
+              <li>Riesgo crítico de interrupción por software obsoleto.</li>
+              <li>Dependencia total de procesos manuales y planillas.</li>
+            </ul>
+          </div>
+          <div class="vs-card good">
+            <h4 style="color:#10b981">Con OpenCORE</h4>
+            <ul class="vs-list">
+              <li>Control total y trazabilidad de activos industriales.</li>
+              <li>Integración estructural: Datos en tiempo real.</li>
+              <li>Infraestructura resiliente y escalable con IA.</li>
+              <li>Automatización de procesos logísticos end-to-end.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="test-grid" style="margin-top:60px">
+          <div class="test-card reveal">
+            <div class="tn-big">Capital de Trabajo Atrapado</div>
+            <p class="mstat-p">El <strong>35%</strong> de las empresas que carecen de un software gestión repuestos
+              Chile profesional tienen capital inmovilizado en stock innecesario o perdido.</p>
+          </div>
+          <div class="test-card reveal">
+            <div class="tn-big">Incompetitividad Estructural</div>
+            <p class="mstat-p">Trabajar con sistemas desconectados genera un costo de oportunidad de hasta un
+              <strong>28%</strong> en la capacidad de respuesta frente a la competencia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     INDUSTRIAS QUE TRANSFORMAMOS
+======================================================== -->
+    <section class="svc-sec" style="background: rgba(0,0,0,0.2)">
+      <div class="container">
+        <div class="sec-hdr reveal" style="text-align:center">
+          <div class="sec-tag">Verticales Estratégicas</div>
+          <h2 class="sec-title">Soluciones para sectores de<br>misión crítica.</h2>
+        </div>
+        <div class="ind-grid reveal">
+          <div class="ind-card">
+            <span class="ind-ico">🚜</span>
+            <h4>Minería & Maquinaria</h4>
+          </div>
+          <div class="ind-card">
+            <span class="ind-ico">🚗</span>
+            <h4>Sector Automotriz</h4>
+          </div>
+          <div class="ind-card">
+            <span class="ind-ico">🏢</span>
+            <h4>Retail Técnico</h4>
+          </div>
+          <div class="ind-card">
+            <span class="ind-ico">📦</span>
+            <h4>Distribución Industrial</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-sec" id="servicios">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">Servicios Enterprise</div>
+          <h2 class="sec-title">Eficiencia mediante<br>ingeniería estructural.</h2>
+          <p class="sec-sub">Cuatro áreas de expertise diseñadas para resolver ineficiencias críticas en la cadena de
+            suministro e infraestructura tecnológica.</p>
+        </div>
+        <div class="svc-grid">
+
+          <div class="svc-card c-c reveal">
+            <span class="svc-n">01</span>
+            <div class="svc-ico">
+              <svg viewBox="0 0 26 26" fill="none" role="img" aria-label="Icono Integración ERP">
+                <path d="M4 14l4 4 14-14" stroke="#00C2FF" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M2 12v10a2 2 0 002 2h18a2 2 0 002-2V12" stroke="#00C2FF" stroke-width="1.5" />
+                <path d="M7 18h12M10 21h6" stroke="#00C2FF" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Integración ERP & CRM</h3>
+            <p>Sincronización de flujos críticos entre SAP, Salesforce y plataformas comerciales a medida para una
+              visión
+              360° del negocio.</p>
+            <div class="svc-div"></div>
+            <div class="svc-feats">
+              <div class="svc-feat"><span class="svc-dot"></span>Auditoría de deuda técnica</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Migración por capas controladas</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Java EE → Spring Boot / NestJS</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Oracle → PostgreSQL</div>
+            </div>
+            <span class="svc-cta">Ver detalles →</span>
+          </div>
+
+          <div class="svc-card c-i reveal">
+            <span class="svc-n">02</span>
+            <div class="svc-ico">
+              <svg viewBox="0 0 26 26" fill="none" role="img" aria-label="Icono Sistema Integral de Gestión Operativa">
+                <rect x="2" y="2" width="9" height="9" rx="2" stroke="#818CF8" stroke-width="1.5" />
+                <rect x="15" y="2" width="9" height="9" rx="2" stroke="#818CF8" stroke-width="1.5" />
+                <rect x="2" y="15" width="9" height="9" rx="2" stroke="#818CF8" stroke-width="1.5" />
+                <path d="M15 19.5h9M19.5 15v9" stroke="#818CF8" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Sistema Integral de Gestión Operativa</h3>
+            <p>Solución diseñada para empresas que necesitan control total sobre su operación técnica y logística,
+              reduciendo pérdidas y errores mediante automatización.</p>
+            <div class="svc-div"></div>
+            <div class="svc-feats">
+              <div class="svc-feat"><span class="svc-dot"></span>Gestión de repuestos y existencias</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Control de inventarios inteligente</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Administración de maquinaria y activos</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Trazabilidad completa del ciclo</div>
+            </div>
+            <span class="svc-cta">Ver detalles →</span>
+          </div>
+
+          <div class="svc-card c-i reveal">
+            <span class="svc-n">03</span>
+            <div class="svc-ico">
+              <svg viewBox="0 0 26 26" fill="none" role="img" aria-label="Icono Comercio Exterior">
+                <circle cx="13" cy="13" r="10" stroke="#00C2FF" stroke-width="1.5" />
+                <path d="M13 3v20M3 13h20" stroke="#00C2FF" stroke-width="1.5" />
+                <path d="M6 6l14 14M20 6L6 20" stroke="#00C2FF" stroke-width="1.5" opacity="0.5" />
+              </svg>
+            </div>
+            <h3>Comercio Exterior</h3>
+            <p>Digitalización de procesos aduaneros e integración con agentes de carga para una trazabilidad total de
+              tus
+              importaciones y exportaciones.</p>
+            <div class="svc-div"></div>
+            <div class="svc-feats">
+              <div class="svc-feat"><span class="svc-dot"></span>RAG sobre datos propios</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Automatización de consultas</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Asistentes internos conectados</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Integración OpenAI / modelos locales</div>
+            </div>
+            <span class="svc-cta">Ver detalles →</span>
+          </div>
+
+          <div class="svc-card c-c reveal">
+            <span class="svc-n">04</span>
+            <div class="svc-ico">
+              <svg viewBox="0 0 26 26" fill="none" role="img" aria-label="Icono Logística">
+                <rect x="3" y="3" width="20" height="20" rx="2" stroke="#00C2FF" stroke-width="1.5" />
+                <path d="M3 8h20M8 3v20M16 3v20" stroke="#00C2FF" stroke-width="1.5" />
+                <path d="M3 16h20" stroke="#00C2FF" stroke-width="1.5" />
+              </svg>
+            </div>
+            <h3>Logística de Repuestos</h3>
+            <p>Optimización de inventarios críticos y control de activos. Reducimos quiebres de stock mediante
+              algoritmos
+              de predicción de demanda.</p>
+            <div class="svc-div"></div>
+            <div class="svc-feats">
+              <div class="svc-feat"><span class="svc-dot"></span>Gestión multimoneda y tributaria</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Integración SAP / Tango / Oracle</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Logística de repuestos automotrices</div>
+              <div class="svc-feat"><span class="svc-dot"></span>Comercio exterior y aduana</div>
+            </div>
+            <span class="svc-cta">Ver detalles →</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     CASOS DE ÉXITO
+======================================================== -->
+    <section class="cases" id="clientes">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">Casos de Éxito</div>
+          <h2 class="sec-title">Proyectos que hablan<br>por sí solos.</h2>
+          <p class="sec-sub">Empresas líderes que confiaron en OpenCORE para proyectos críticos, complejos y de alto
+            impacto.</p>
+        </div>
+        <div class="cases-grid">
+          <div class="cc reveal">
+            <div class="cc-top">
+              <div class="cc-row">
+                <div class="cc-ico ic0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M14 16H9m10 0h3v-3.15a1 1 0 00-.84-.99L16 11l-3-4H8l-3 4-5.16.86a1 1 0 00-.84.99V16h3m3 0a3 3 0 106 0m-6 0a3 3 0 11-6 0M3 16a3 3 0 106 0m-6 0a3 3 0 11-6 0M16 11H8M16 11V7H8v4" />
+                  </svg>
+                </div>
+                <h3>COCHA</h3>
+              </div><span class="cc-sector">Automotriz</span>
+            </div>
+            <p>Desarrollo evolutivo y correctivo de aplicaciones de back office y soluciones de integración con
+              plataformas abiertas.</p>
+            <div class="cc-foot">
+              <div class="cc-tags"><span class="ct">Java EE</span><span class="ct">Back Office</span><span
+                  class="ct">Integración</span></div><span class="cc-arr">→</span>
+            </div>
+          </div>
+          <div class="cc ci reveal">
+            <div class="cc-top">
+              <div class="cc-row">
+                <div class="cc-ico ic2">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
+                  </svg>
+                </div>
+                <h3>Aguas Andinas</h3>
+              </div><span class="cc-sector">Utilities</span>
+            </div>
+            <p>Consultoría para la implantación del sistema de facturación de consumo de agua potable para la Región
+              Metropolitana.</p>
+            <div class="cc-foot">
+              <div class="cc-tags"><span class="ct">Facturación</span><span class="ct">Consultoría</span><span
+                  class="ct">RM Chile</span></div><span class="cc-arr">→</span>
+            </div>
+          </div>
+          <div class="cc reveal">
+            <div class="cc-top">
+              <div class="cc-row">
+                <div class="cc-ico ic3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                </div>
+                <h3>ONU</h3>
+              </div><span class="cc-sector">Org. Internacional</span>
+            </div>
+            <p>Desarrollo de soluciones de integración de procesos internos para la Organización de las Naciones Unidas.
+            </p>
+            <div class="cc-foot">
+              <div class="cc-tags"><span class="ct">Integración</span><span class="ct">APIs</span><span
+                  class="ct">Enterprise</span></div><span class="cc-arr">→</span>
+            </div>
+          </div>
+          <div class="cc ci reveal">
+            <div class="cc-top">
+              <div class="cc-row">
+                <div class="cc-ico ic4">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3v13h6V3" />
+                    <path d="M12 3v13" />
+                    <path d="m15 16 3 5H6l3-5" />
+                  </svg>
+                </div>
+                <h3>Beiersdorf</h3>
+              </div><span class="cc-sector">FMCG</span>
+            </div>
+            <p>Soporte de implementación SAP para Beiersdorf en Chile, Perú, Paraguay, Bolivia y Uruguay. Roll-out
+              regional completo.</p>
+            <div class="cc-foot">
+              <div class="cc-tags"><span class="ct">SAP</span><span class="ct">Roll-out</span><span class="ct">5
+                  países</span></div><span class="cc-arr">→</span>
+            </div>
+          </div>
+          <div class="cc reveal">
+            <div class="cc-top">
+              <div class="cc-row">
+                <div class="cc-ico ic1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                    <line x1="6" y1="1" x2="6" y2="4" />
+                    <line x1="10" y1="1" x2="10" y2="4" />
+                    <line x1="14" y1="1" x2="14" y2="4" />
+                  </svg>
+                </div>
+                <h3>Nestlé</h3>
+              </div><span class="cc-sector">FMCG</span>
+            </div>
+            <p>Proyecto migración e implantación SAP en Perú, Bolivia y Chile. Integración de SAP con Centro de
+              Distribución Nestlé Quilicura.</p>
+            <div class="cc-foot">
+              <div class="cc-tags"><span class="ct">SAP</span><span class="ct">WMS</span><span
+                  class="ct">Migración</span>
+              </div><span class="cc-arr">→</span>
+            </div>
+          </div>
+          <div class="cc ci reveal">
+            <div class="cc-top">
+              <div class="cc-row">
+                <div class="cc-ico ic5">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                    <line x1="7" y1="7" x2="7.01" y2="7" />
+                  </svg>
+                </div>
+                <h3>Tesa</h3>
+              </div><span class="cc-sector">Industrial</span>
+            </div>
+            <p>Soporte de implementación SAP para Tesa Chile S.A., asegurando la correcta adopción del sistema en
+              operaciones locales.</p>
+            <div class="cc-foot">
+              <div class="cc-tags"><span class="ct">SAP</span><span class="ct">Soporte</span><span
+                  class="ct">Chile</span>
+              </div><span class="cc-arr">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     PROCESO
+======================================================== -->
+    <section class="process">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">Metodología</div>
+          <h2 class="sec-title">De la idea al sistema<br>en producción.</h2>
+        </div>
+        <div class="proc-steps">
+          <div class="step reveal">
+            <div class="step-n">01</div>
+            <h4>Diagnóstico</h4>
+            <p>Relevamiento de procesos, sistemas existentes y puntos de dolor operativos.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-n">02</div>
+            <h4>Arquitectura</h4>
+            <p>Diseño técnico y funcional, selección de tecnologías y roadmap detallado.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-n">03</div>
+            <h4>Desarrollo</h4>
+            <p>Sprints iterativos con entregas frecuentes, pruebas continuas y feedback.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-n">04</div>
+            <h4>Operación</h4>
+            <p>Deploy en producción, capacitación, soporte y mejora continua post-lanzamiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     TECH STACK
+======================================================== -->
+    <section class="tech">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">Stack tecnológico</div>
+          <h2 class="sec-title">Tecnología probada.<br>Resultados concretos.®</h2>
+        </div>
+        <div class="tech-grid reveal">
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path d="M78.6 112c-29.2 0-51-12.8-51-31.1C27.6 62.6 49.3 50 78.6 50s51 12.6 51 30.9-21.8 31.1-51 31.1z"
+                  fill="url(#java_gradient)" />
+                <path d="M85 86.8c-12.8 0-25-3.3-25-7.4 0-4.3 12.2-7.6 25-7.6s25 3.3 25 7.6c-.1 4.1-12.2 7.4-25 7.4z"
+                  fill="#FFF" opacity=".2" />
+                <path
+                  d="M49 116.8c-8.7-2.6-14-6.4-14-10.4 0-5 6.9-9.3 18.2-11.7l1.5 4.3C45 101 39.5 104 39.5 106.4c0 2.4 4.5 5.5 12.5 7.6l-3 2.8M66.3 118.8c.6 0 1.2-.1 1.8-.1 13.9-1.2 24.5-5.9 24.5-11.6 0-1.8-.8-3.5-2.2-5l4-2.8c2 2.1 3 4.8 3 7.8 0 7.4-12.5 13-29.1 14.2-.6 0-1.3.1-2 .1-11.4 0-22.1-3.3-27-8l3.4-3.4c4 3.7 13.2 6.6 23.6 8.8z"
+                  fill="#3B82F6" />
+                <path
+                  d="M81.5 53.8c11-.1 19.8 4 19.8 9.3 0 5.4-9.1 9.8-20.5 9.8s-20.5-4.4-20.5-9.8c.1-4 5.3-7.5 13-9l1.4-4.5c-9.3 1.9-18.7 6.4-18.7 13.5 0 8 11.2 14.5 24.9 14.5s24.9-6.5 24.9-14.5c0-6.7-7-12.2-16.7-14.1l-7.6 4.8z"
+                  fill="#0EA5E9" />
+                <path d="M12.9 69L10 66.8c3.2-4.1 8-6.8 13.4-7.5l.6 4.7c-4.2.5-7.9 2.6-11.1 5z" fill="#38D9FF" />
+                <path d="M72.2 46.8C65.5 37 60.1 23.3 64.9 9c4.2 12.5 16 19.7 16 31 0 5-1.9 9.6-5.4 13l-3.3-6.2z"
+                  fill="#F59E0B" />
+                <defs>
+                  <linearGradient id="java_gradient" x1="78.6" y1="50" x2="78.6" y2="112"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3B82F6" stop-opacity=".1" />
+                    <stop offset="1" stop-color="#0EA5E9" stop-opacity=".3" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="tn">Java EE</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M63.8 2C30 2 27.5 16.5 27.5 16.5l.2 17.2h36.7v5.2H14.1s-12.5-1.4-12.5 31.9c0 33.3 10.9 31.5 10.9 31.5h16.5V84.6c0-11 9.1-20 20.3-20h26.4c11.3 0 20.3 3.6 20.3-7.4V22.2C96 2 63.8 2 63.8 2zm-12.3 22.8c-3.1 0-5.6-2.5-5.6-5.6s2.5-5.6 5.6-5.6 5.6 2.5 5.6 5.6-2.5 5.6-5.6 5.6z"
+                  fill="#3B82F6" />
+                <path
+                  d="M64.2 126c33.8 0 36.3-14.5 36.3-14.5l-.2-17.2H63.6v-5.2h50.3s12.5 1.4 12.5-31.9c0-33.3-10.9-31.5-10.9-31.5H99v17.7c0 11-9.1 20-20.3 20H52.3c-11.3 0-20.3-3.6-20.3 7.4v35c0 20.2 32.2 20.2 32.2 20.2zm12.3-22.8c3.1 0 5.6 2.5 5.6 5.6s-2.5 5.6-5.6 5.6-5.6-2.5-5.6-5.6 2.5-5.6 5.6-5.6z"
+                  fill="#F59E0B" />
+              </svg>
+            </div>
+            <div class="tn">Python</div>
+          </div>
+
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path d="M64 126a62 62 0 100-124 62 62 0 000 124z" fill="#009688" />
+                <path d="M64 122a58 58 0 100-116 58 58 0 000 116z" fill="#00C2FF" opacity=".1" />
+                <path d="M64 2A62 62 0 002 64a61.6 61.6 0 009.6 33.1L58.5 2H64z" fill="#000" opacity=".1" />
+                <path
+                  d="M37.9 33.5c-4 0-7.3 3.3-7.3 7.3s3.3 7.3 7.3 7.3 7.3-3.3 7.3-7.3-3.3-7.3-7.3-7.3zm52.2 0c-4 0-7.3 3.3-7.3 7.3s3.3 7.3 7.3 7.3 7.3-3.3 7.3-7.3-3.3-7.3-7.3-7.3zM64 54.3c-2.2 0-3.9 1.7-3.9 3.9v32c0 2.2 1.7 3.9 3.9 3.9s3.9-1.7 3.9-3.9v-32c0-2.2-1.7-3.9-3.9-3.9z"
+                  fill="#FFF" />
+                <path
+                  d="M64 94.1c-16 0-30.8-9.1-38.3-23.8-1-2-.1-4.4 1.9-5.4 2-1 4.4-.1 5.4 1.9C39.2 78.5 51.1 85.8 64 85.8c13 0 24.8-7.3 31-19 1-2 3.4-2.9 5.4-1.9 2 1 2.9 3.4 1.9 5.4C94.8 85 80 94.1 64 94.1z"
+                  fill="#FFF" />
+              </svg>
+            </div>
+            <div class="tn">FastAPI</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path d="M64 126L7 93V35L64 2l57 33v58l-57 33z" fill="#EA2845" />
+                <path d="M64 88.5L34.1 71.3V36.7L64 19.5l29.9 17.2v34.6L64 88.5z" fill="#FFF" opacity=".1" />
+                <path d="M37.5 44l26.5 45.9L90.5 44H37.5z" fill="#FFF" />
+                <path d="M64 81.6L46 50.4h36L64 81.6z" fill="#EA2845" />
+              </svg>
+            </div>
+            <div class="tn">NestJS</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M123.5 58.7c1.3 5.4.1 15-4.5 19.1-12.7 11.2-22.1.2-22.1.2s-3.7-4.1-8-12.3c23.6-2.1 33.3-12.4 34.6-7zm-41-36.9c-5.8 0-9.5-3.6-9.5-3.6-6-4.5-12.8-5.3-16.1-5.3-3.3 0-10.1.8-16.1 5.3 0 0-3.7 3.6-9.5 3.6-4.1 0-7.3-1.6-9.2-2.9-1.2-.8-1.7-.8-2-.5-3.3 2.9-7.5 9-9 14.1-1.3 4.4-.1 8.8 3.5 13 4 4.7 9.8 8.1 16.2 9.4-4 7.6-6.1 16.1-6.1 24.9 0 31.9 26 57.9 57.9 57.9 31.9 0 57.9-26 57.9-57.9 0-8.8-2.1-17.3-6.1-24.9 6.4-1.3 12.2-4.7 16.2-9.4 3.6-4.2 4.8-8.6 3.5-13-1.5-5.1-5.7-11.2-9-14.1-.3-.3-.8-.3-2 .5-1.9 1.3-5.1 2.9-9.2 2.9zm-46.7 10.1c-4.4 4.5-5.2 13-1 18.2 4.4 5.4 12.9 6.9 20.3 4 5-1.8 11.1-2.4 16.4-2.4 5.3 0 11.4.6 16.4 2.4 7.4 2.9 15.9 1.4 20.3-4 4.2-5.2 3.4-13.7-1-18.2-1.8-1.9-4.3-3-6.9-3h-1.5c-6.8 0-14.1-3.6-18.7-6.2l-3.3-1.9-1.7-.8c-1-.5-2.2-.5-3.1 0l-1.7.8-3.3 1.9c-4.6 2.6-11.9 6.2-18.7 6.2h-1.5c-2.6 0-5.1 1.1-6.9 3zm19.8 45.9c-2.2 0-3.9 1.8-3.9 3.9v10.5c0 2.2 1.8 3.9 3.9 3.9 2.2 0 3.9-1.8 3.9-3.9V81.7c0-2.1-1.7-3.9-3.9-3.9zm37.2 0c-2.2 0-3.9 1.8-3.9 3.9v10.5c0 2.2 1.8 3.9 3.9 3.9 2.2 0 3.9-1.8 3.9-3.9V81.7c0-2.1-1.7-3.9-3.9-3.9z"
+                  fill="#0EA5E9" />
+              </svg>
+            </div>
+            <div class="tn">Docker</div>
+          </div>
+
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M64 15C32.7 15 7.4 21.6 7.4 29.8v68.4c0 8.2 25.3 14.8 56.6 14.8s56.6-6.6 56.6-14.8V29.8C120.6 21.6 95.3 15 64 15zm0 18.5c-24 0-43.5-3.3-43.5-7.4 0-4 19.5-7.4 43.5-7.4S107.5 22 107.5 26.1c0 4.1-19.5 7.4-43.5 7.4zM20.5 45.4c11.2 5 26.5 8 43.5 8 17 0 32.3-3 43.5-8v12.3c0 4-19.5 7.4-43.5 7.4S20.5 61.7 20.5 57.7V45.4zm0 24.6c11.2 5 26.5 8 43.5 8 17 0 32.3-3 43.5-8v12.3c0 4-19.5 7.4-43.5 7.4S20.5 86.3 20.5 82.3V70z"
+                  fill="#3B82F6" />
+              </svg>
+            </div>
+            <div class="tn">PostgreSQL</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M63.8 116.3c29.7 0 53.8-23.7 53.8-52.9S93.5 10.5 63.8 10.5 10 34.2 10 63.4s24.1 52.9 53.8 52.9zm0-91.6c21.8 0 39.5 17.4 39.5 38.8s-17.7 38.8-39.5 38.8S24.3 84.8 24.3 63.4s17.7-38.7 39.5-38.7zm0 20.3c10.4 0 18.8 8.3 18.8 18.5s-8.4 18.5-18.8 18.5-18.8-8.3-18.8-18.5 8.4-18.5 18.8-18.5z"
+                  fill="#F59E0B" />
+              </svg>
+            </div>
+            <div class="tn">Oracle DB</div>
+          </div>
+
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M89 31.9c-2 0-3.6 1.6-3.6 3.6v45.1L78 69.3h-4.6c4.7 4.7 8.1 10.3 9.8 16.5 1.7-6.2 5.1-11.8 9.8-16.5h-4.6v-27l6.5 7.4V36.3L89 31.9z"
+                  fill="#EA2845" />
+                <circle cx="28" cy="80" r="12" fill="#3B82F6" />
+                <circle cx="56" cy="48" r="10" fill="#F59E0B" />
+                <circle cx="89" cy="84" r="18" fill="#22C55E" />
+                <path d="M37.5 72.5L48 56M64 54l13.5 17" stroke="#FFF" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="tn">n8n Workflows</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M64 5L10 33.6v57.1L64 120l54-29.3V33.6L64 5zm-3 103V66.6L16.2 41v48.6L61 108zM17.5 35L64 10.6 110.5 35 64 59.4 17.5 35zm94.3 54.6L67 108V66.6l44.8-25.6v48.6z"
+                  fill="#3B82F6" />
+                <path d="M64 50l-15-8V26l15 8 15-8v16l-15 8z" fill="#38D9FF" />
+              </svg>
+            </div>
+            <div class="tn">SAP</div>
+          </div>
+
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M89.7 54.4C86 43.1 76.5 34.6 64.9 33.3c-11.8-1.2-22.9 4.3-29.3 14.5-6.3 10-6.1 23.3.4 33.3 6.6 10 17.8 15.3 29.5 13.9 11.2-1.3 20.4-9.3 24.1-20.1l-14.8-1c-2.3 5.4-8.3 8.3-14.1 6.8-5.7-1.4-9.9-6.9-9.5-12.8.4-5.9 5.3-10.8 11.2-11.4s11.3 3.4 12.8 9.1l14.5-1.1z"
+                  fill="#3B82F6" />
+                <path d="M12.9 64.5h20.5m61 0h20.5M64 13.5v20.5m0 61v20.5" stroke="#3B82F6" stroke-width="6"
+                  opacity="0.3" />
+              </svg>
+            </div>
+            <div class="tn">COBOL</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M64 21C42 21 24 30.5 24 42v44c0 11.5 18 21 40 21s40-9.5 40-21V42c0-11.5-18-21-40-21zm0 14c16.5 0 30 5.6 30 12.5S80.5 60 64 60 34 54.4 34 47.5 47.5 35 64 35zm-30 25.5v-7.3c6 4.6 17 7.8 30 7.8s24-3.2 30-7.8v7.3c0 7-13.5 12.5-30 12.5S34 67.5 34 60.5zm0 18v-7.3c6 4.6 17 7.8 30 7.8s24-3.2 30-7.8v7.3c0 7-13.5 12.5-30 12.5S34 85.5 34 78.5z"
+                  fill="#2563EB" />
+              </svg>
+            </div>
+            <div class="tn">SQL</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M64 7L12 37v54l52 30 52-30V37L64 7zm0 18.2l36 20.8-36 20.8L28 46l36-20.8zm0 84.6l-36-20.8V46l36 20.8V110zm5-4.8V66.8L105 46v43.4l-36 20.8z"
+                  fill="#10B981" />
+              </svg>
+            </div>
+            <div class="tn">ESMART</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M89.7 54.4C86 43.1 76.5 34.6 64.9 33.3c-11.8-1.2-22.9 4.3-29.3 14.5-6.3 10-6.1 23.3.4 33.3 6.6 10 17.8 15.3 29.5 13.9 11.2-1.3 20.4-9.3 24.1-20.1l-14.8-1c-2.3 5.4-8.3 8.3-14.1 6.8-5.7-1.4-9.9-6.9-9.5-12.8.4-5.9 5.3-10.8 11.2-11.4s11.3 3.4 12.8 9.1l14.5-1.1z"
+                  fill="#6366F1" />
+                <path d="M86 78h18v10H86zm10-10v28h-10V68z" fill="#6366F1" />
+                <path d="M106 78h18v10h-18zm10-10v28h-10V68z" fill="#6366F1" />
+              </svg>
+            </div>
+            <div class="tn">C / C++</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M64 15C32 15 6 28 6 44s26 29 58 29 58-13 58-29-26-29-58-29zm1 40c-15.5 0-28-5.8-28-13s12.5-13 28-13 28 5.8 28 13-12.5 13-28 13z"
+                  fill="#8B5CF6" />
+                <path d="M47 36H39v18H29V36h-8v-6h26v6zm31 18H68V30h10v6h-6v4h6v14zm26 0H88v-6h10v-4H88v-6h16v16z"
+                  fill="#FFF" />
+              </svg>
+            </div>
+            <div class="tn">PHP</div>
+          </div>
+          <div class="ti">
+            <div class="te">
+              <svg width="40" height="40" viewBox="0 0 128 128" fill="none">
+                <path
+                  d="M64 12V34.5C80 34.5 95 40 105.5 50.5C116 61 121.5 76 121.5 92H102C102 71 85 54 64 54C43 54 26 71 26 92H6.5C6.5 76 12 61 22.5 50.5C33 40 48 34.5 64 34.5z"
+                  fill="#3B82F6" />
+                <path d="M64 63C79.5 63 92 75.5 92 91H36C36 75.5 48.5 63 64 63z" fill="#2563EB" opacity="0.5" />
+                <text x="64" y="98" font-family="'Inter', sans-serif" font-weight="900" font-size="42" fill="#60A5FA"
+                  text-anchor="middle">R</text>
+              </svg>
+            </div>
+            <div class="tn">R</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     TESTIMONIOS HUMANIZADOS
+    ============================================================ -->
+    <section class="testimonials" id="testimonios">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">Prueba Social</div>
+          <h2 class="sec-title">Empresas que ya recuperaron<br><span class="grad">su capital operativo.</span></h2>
+          <p class="sec-sub">Directivos que confiaron su infraestructura crítica a OpenCORE y vieron resultados medibles.</p>
+        </div>
+        <div class="test-grid" style="margin-bottom:40px">
+          <div class="test-card-v2 reveal">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">OpenCORE migró nuestro sistema crítico sin detener producción ni un solo día. <strong>La continuidad operacional fue total.</strong> Logramos visibilidad de activos que nunca habíamos tenido en 15 años.</p>
+            <div class="test-meta">
+              <div class="test-avatar">👨‍💼</div>
+              <div>
+                <div class="test-name">Roberto Vásquez</div>
+                <div class="test-role">Gerente de Operaciones</div>
+              </div>
+              <span class="test-company-badge">Minería</span>
+            </div>
+          </div>
+          <div class="test-card-v2 reveal">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">Teníamos el 30% de nuestro inventario inmovilizado sin saberlo. Con OpenCORE <strong>liberamos capital que reinvertimos en crecimiento.</strong> El ROI fue visible en menos de 8 meses.</p>
+            <div class="test-meta">
+              <div class="test-avatar">👩‍💼</div>
+              <div>
+                <div class="test-name">Carmen Herrera</div>
+                <div class="test-role">Directora de Supply Chain</div>
+              </div>
+              <span class="test-company-badge">Distribución</span>
+            </div>
+          </div>
+          <div class="test-card-v2 reveal">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">Nuestros sistemas legacy llevaban 12 años sin integrarse. OpenCORE entregó <strong>arquitectura escalable y datos en tiempo real</strong> que transformaron cómo tomamos decisiones.</p>
+            <div class="test-meta">
+              <div class="test-avatar">👨‍💻</div>
+              <div>
+                <div class="test-name">Patricio Morales</div>
+                <div class="test-role">CTO — Tecnología y Sistemas</div>
+              </div>
+              <span class="test-company-badge">Industrial</span>
+            </div>
+          </div>
+          <div class="test-card-v2 reveal">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">Redujimos los quiebres de stock en un <strong>65% en 4 meses.</strong> Lo que antes era una crisis semanal ahora es un proceso predecible y completamente automatizado.</p>
+            <div class="test-meta">
+              <div class="test-avatar">👩‍🔬</div>
+              <div>
+                <div class="test-name">Andrea Campos</div>
+                <div class="test-role">Jefa de Logística y Abastecimiento</div>
+              </div>
+              <span class="test-company-badge">Automotriz</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Market stats in smaller format -->
+        <div class="test-grid">
+          <div class="test-card reveal">
+            <div class="tn-big">Capital de Trabajo Atrapado</div>
+            <p class="mstat-p">El <strong>35%</strong> de las empresas sin gestión profesional de repuestos tienen capital inmovilizado en stock innecesario o perdido — sin saberlo.</p>
+          </div>
+          <div class="test-card reveal">
+            <div class="tn-big">El Costo del Tiempo Muerto</div>
+            <p class="mstat-p">Hasta un <strong>28%</strong> del tiempo operativo diario se pierde consolidando datos entre plataformas que no se comunican. Eso es un tercio de su capacidad productiva.</p>
+          </div>
+          <div class="test-card reveal">
+            <div class="tn-big">Procesos Manuales Críticos</div>
+            <p class="mstat-p">El <strong>40%</strong> de las empresas logísticas aún dependen de planillas para operaciones críticas de reposición. Cada error manual es capital en riesgo.</p>
+          </div>
+          <div class="test-card reveal">
+            <div class="tn-big">El Retorno de Integrar</div>
+            <p class="mstat-p">Integrar sistemas heredados con plataformas modernas reduce hasta un <strong>30%</strong> los costos operativos mensuales. La pregunta no es si modernizar, sino cuánto más esperar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   </section>
+
+    <!-- ========================================================
+     COMPROMISO
+======================================================== -->
+    <section class="cases" style="padding:100px 0 120px">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">Nuestro Enfoque</div>
+          <h2 class="sec-title">Nuestro compromiso<br>con tu operación.</h2>
+          <p class="sec-sub">Construimos sistemas robustos en los que tu negocio puede confiar, enfocados en reducir
+            riesgos y maximizar rentabilidad a largo plazo.</p>
+        </div>
+        <div class="cases-grid">
+          <div class="cc ci reveal" style="text-align:center; padding:40px 30px">
+            <div class="cc-ico ic1" style="margin:0 auto 20px; width:56px; height:56px; font-size:1.6rem">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 style="font-size:1.1rem; margin-bottom:12px">El cliente es prioridad</h3>
+            <p style="font-size:1rem; margin-bottom:0">Buscamos relaciones a largo plazo basadas en soporte continuo y
+              resultados operativos medibles.</p>
+          </div>
+          <div class="cc reveal" style="text-align:center; padding:40px 30px">
+            <div class="cc-ico ic0" style="margin:0 auto 20px; width:56px; height:56px; font-size:1.6rem">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 style="font-size:1.1rem; margin-bottom:12px">Transparencia técnica</h3>
+            <p style="font-size:1rem; margin-bottom:0">El código, los datos y la propiedad intelectual de la solución
+              quedan 100% protegidos y bajo tu firme control.</p>
+          </div>
+          <div class="cc ci reveal" style="text-align:center; padding:40px 30px">
+            <div class="cc-ico ic5" style="margin:0 auto 20px; width:56px; height:56px; font-size:1.6rem">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3 style="font-size:1.1rem; margin-bottom:12px">Arquitectura evolutiva</h3>
+            <p style="font-size:1rem; margin-bottom:0">Sistemas diseñados estructuralmente para crecer sin necesidad de
+              rehacer todo desde cero en el futuro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     LEAD MAGNETS — MICRO-CONVERSIONES
+    ============================================================ -->
+    <section class="leadmag-section">
+      <div class="container">
+        <div class="sec-hdr reveal">
+          <div class="sec-tag">Recursos Gratuitos</div>
+          <h2 class="sec-title">Descubra el costo real<br><span class="grad">de su deuda tecnológica.</span></h2>
+          <p class="sec-sub">Herramientas de diagnóstico sin costo para líderes operacionales y financieros.</p>
+        </div>
+        <div class="leadmag-grid">
+          <div class="leadmag-card reveal">
+            <div class="lm-tag">✓ Descarga inmediata</div>
+            <div class="lm-ico">📋</div>
+            <h3>Evaluación gratuita: ¿Cuánto dinero pierde su sistema actual?</h3>
+            <p>Metodología de 15 puntos para identificar fugas de capital operativo en su infraestructura. Diseñado para CFOs y Gerentes de Operaciones.</p>
+            <div class="lm-form">
+              <input type="email" placeholder="Email corporativo" id="lm1">
+              <button class="lm-btn" onclick="captureLead('evaluacion','lm1')">Obtener →</button>
+            </div>
+            <div class="lm-disclaimer">🔒 Sin spam. Solo su evaluación. Sin compromiso.</div>
+          </div>
+          <div class="leadmag-card reveal">
+            <div class="lm-tag">✓ Guía técnica</div>
+            <div class="lm-ico">📊</div>
+            <h3>Guía técnica: Cómo medir el costo real de su deuda tecnológica</h3>
+            <p>Framework con métricas concretas para cuantificar el impacto financiero de sistemas legacy. Incluye plantilla de cálculo y benchmarks del sector industrial chileno.</p>
+            <div class="lm-form">
+              <input type="email" placeholder="Email corporativo" id="lm2">
+              <button class="lm-btn" onclick="captureLead('guia','lm2')">Obtener →</button>
+            </div>
+            <div class="lm-disclaimer">🔒 Sin spam. Solo contenido de valor. Sin compromiso.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     CONTACTO — FormSubmit
+======================================================== -->
+    <section class="contact" id="contacto">
+      <div class="container">
+        <div class="contact-wrap reveal">
+          <div class="contact-inner">
+
+            <!-- Left -->
+            <div class="contact-left">
+              <div class="sec-tag">Contacto</div>
+              <h2>30 minutos para descubrir cuánto está <span class="grad">perdiendo hoy.</span></h2>
+              <p>Un diagnóstico técnico gratuito revela pérdidas operativas ocultas, capital inmovilizado y puntos críticos de riesgo en su infraestructura. Sin compromiso, total confidencialidad.</p>
+              <div class="ci-list">
+                <div class="ci-row">
+                  <div class="ci-ico" style="background:transparent; border:none; padding:0; width:auto; height:auto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1c2cecfd5c0c2d5cee1ced1c4cfc2ced3c48fc2cd">[email&#160;protected]</a></span>
+                </div>
+                <div class="ci-row">
+                  <div class="ci-ico" style="background:transparent; border:none; padding:0; width:auto; height:auto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  </div><span>+56 9 4958 7198</span>
+                </div>
+                <div class="ci-row">
+                  <div class="ci-ico" style="background:transparent; border:none; padding:0; width:auto; height:auto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div><span>Santiago, Chile</span>
+                </div>
+                <div class="ci-row">
+                  <div class="ci-ico" style="background:transparent; border:none; padding:0; width:auto; height:auto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                  </div><span>Respuesta en menos de 24hs hábiles</span>
+                </div>
+                <div class="ci-row">
+                  <div class="ci-ico" style="background:transparent; border:none; padding:0; width:auto; height:auto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  </div><a href="https://linkedin.com/company/opencore" target="_blank" rel="noopener">LinkedIn —
+                    OpenCORE</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="contact-right">
+              <form class="cform" action="https://formsubmit.co/contacto@opencore.cl" method="POST" id="cform">
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="Nuevo contacto desde OpenCORE.cl" />
+                <input type="hidden" name="_autoresponse"
+                  value="Gracias por contactar a OpenCORE. Te responderemos a la brevedad." />
+                <input type="hidden" name="_template" value="table" />
+
+                <div class="f-row">
+                  <div class="fg">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Juan García" required
+                      autocomplete="name" />
+                    <div class="fline"></div>
+                  </div>
+                  <div class="fg">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Mi Empresa S.A."
+                      autocomplete="organization" />
+                    <div class="fline"></div>
+                  </div>
+                </div>
+
+                <div class="fg">
+                  <label for="email">Email corporativo</label>
+                  <input type="email" id="email" name="email" placeholder="juan@empresa.com" required
+                    autocomplete="email" />
+                  <div class="fline"></div>
+                </div>
+
+                <div class="fg">
+                  <label for="area">Área de interés</label>
+                  <select id="area" name="area">
+                    <option value="">Seleccione una opción</option>
+                    <option>Modernización de Sistemas Legacy</option>
+                    <option>Gestión de Inventario y Activos</option>
+                    <option>Automatización e IA</option>
+                    <option>Logística e Integración ERP</option>
+                    <option>Comercio Exterior &amp; Aduana</option>
+                    <option>Otro</option>
+                  </select>
+                  <div class="fline"></div>
+                </div>
+
+                <div class="fg">
+                  <label for="mensaje">Desafío tecnológico</label>
+                  <textarea id="mensaje" name="mensaje"
+                    placeholder="Describe brevemente el sistema, el problema que desea resolver o el proyecto que tiene en mente..."></textarea>
+                  <div class="fline"></div>
+                </div>
+
+                <button type="submit" class="btn-send" id="sbtn">
+                  <span id="sbtn-txt">📋 Solicitar evaluación técnica gratuita</span>
+                </button>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+     FOOTER
+======================================================== -->
+    <footer>
+      <div class="container">
+        <div class="ft-inner">
+          <div class="ft-top">
+            <div class="ft-brand">
+              <a href="#" class="logo">
+                OPENCORE
+              </a>
+              <p>OpenCORE Consulting — Ingeniería de Modernización Empresarial. Más de 25 años transformando operaciones
+                enterprise en Latinoamérica.</p>
+            </div>
+            <div class="ft-col">
+              <h5>Servicios</h5>
+              <a href="#servicios">Modernización Legacy</a>
+              <a href="#servicios">Sistema de Gestión Op.</a>
+              <a href="#servicios">Inteligencia Artificial</a>
+              <a href="#servicios">Logística &amp; ERP</a>
+            </div>
+            <div class="ft-col">
+              <h5>Empresa</h5>
+              <a href="#quienes-somos">Quiénes Somos</a>
+              <a href="#clientes">Clientes</a>
+              <a href="#contacto">Contacto</a>
+            </div>
+            <div class="ft-col">
+              <h5>Conectar</h5>
+              <a href="https://linkedin.com/company/opencore" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                LinkedIn
+              </a>
+              <a href="/cdn-cgi/l/email-protection#dcbfb3b2a8bdbfa8b39cb3acb9b2bfb3aeb9f2bfb0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span class="__cf_email__" data-cfemail="95f6fafbe1f4f6e1fad5fae5f0fbf6fae7f0bbf6f9">[email&#160;protected]</span>
+              </a>
+              <a href="https://github.com/opencore" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="ft-bot">
+            <span>© 2025 OpenCORE Consulting. Todos los derechos reservados.</span>
+            <div class="live-badge"><span class="ldot"></span>Sistemas operativos</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  <!-- ============================================================
+     FLOATING SCHEDULING WIDGET
+  ============================================================ -->
+  <div class="sched-widget" id="schedWidget">
+    <div class="sched-badge">
+      <span style="width:6px;height:6px;border-radius:50%;background:#22C55E;box-shadow:0 0 6px #22C55E;display:inline-block;flex-shrink:0"></span>
+      Disponibilidad inmediata
+    </div>
+    <button class="sched-bubble" onclick="openSched(event)">
+      📅 Agenda un diagnóstico técnico
+    </button>
+  </div>
+
+  <!-- SCHEDULING MODAL -->
+  <div class="sched-modal-overlay" id="schedModal" onclick="if(event.target===this)closeSched()">
+    <div class="sched-modal">
+      <button class="sched-close" onclick="closeSched()">✕</button>
+      <div class="sec-tag" style="margin-bottom:14px">Diagnóstico Gratuito</div>
+      <h3>Agenda un diagnóstico<br>técnico inmediato</h3>
+      <p class="sched-sub">30 minutos para detectar pérdidas operativas ocultas. Sin compromiso, total confidencialidad.</p>
+      <p style="font-size:.75rem;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">Próxima disponibilidad:</p>
+      <div class="sched-slots" id="schedSlots"></div>
+      <div class="fg" style="margin-bottom:16px">
+        <label>Nombre y empresa</label>
+        <input type="text" id="schedName" placeholder="Juan García — Mi Empresa S.A.">
+        <div class="fline"></div>
+      </div>
+      <div class="fg" style="margin-bottom:20px">
+        <label>Email corporativo</label>
+        <input type="email" id="schedEmail" placeholder="juan@empresa.com">
+        <div class="fline"></div>
+      </div>
+      <button class="sched-confirm" onclick="confirmSched()">✅ Confirmar diagnóstico gratuito</button>
+      <div class="sched-guarantee">🔒 Confidencial &nbsp;•&nbsp; Sin compromiso &nbsp;•&nbsp; Respuesta en &lt;2 horas</div>
+    </div>
+  </div>
+
+</main>
+
+  <!-- ========================================================
+     JAVASCRIPT
+======================================================== -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    (function () {
+      'use strict';
+
+      /* ---- HELPERS ---- */
+      const qs = s => document.querySelector(s);
+      const qsa = s => document.querySelectorAll(s);
+      const isMob = window.matchMedia('(pointer:coarse)').matches;
+
+      /* ================================================
+         CUSTOM CURSOR (desktop only)
+      ================================================ */
+      if (!isMob) {
+        const dot = qs('#c-dot');
+        const ring = qs('#c-ring');
+        const aura = qs('#c-aura');
+        let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+
+        document.addEventListener('mousemove', e => {
+          mx = e.clientX; my = e.clientY;
+          if (dot) { dot.style.left = mx + 'px'; dot.style.top = my + 'px'; }
+          if (aura) { aura.style.left = mx + 'px'; aura.style.top = my + 'px'; }
+        });
+
+        (function lerpRing() {
+          rx += (mx - rx) * .13; ry += (my - ry) * .13;
+          if (ring) { ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; }
+          requestAnimationFrame(lerpRing);
+        })();
+
+        const hoverEls = qsa('a,button,.svc-card,.cc,.test-card,.cp,.tl,.exp-item,.ti');
+        hoverEls.forEach(el => {
+          el.addEventListener('mouseenter', () => {
+            if (ring) {
+              ring.style.width = ring.style.height = '56px';
+              ring.style.borderColor = 'rgba(0,194,255,.85)';
+            }
+            if (dot) {
+              dot.style.width = dot.style.height = 'px'; // Hide dot on hover
+              dot.style.opacity = '0';
+            }
+          });
+          el.addEventListener('mouseleave', () => {
+            if (ring) {
+              ring.style.width = ring.style.height = '36px';
+              ring.style.borderColor = 'rgba(0,194,255,.5)';
+            }
+            if (dot) {
+              dot.style.width = dot.style.height = '8px';
+              dot.style.opacity = '1';
+            }
+          });
+        });
+
+        // --- MAGNETIC EFFECT ---
+        const magEls = qsa('.btn-primary, .btn-nav, .btn-secondary, .logo');
+        magEls.forEach(el => {
+          el.addEventListener('mousemove', e => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.03)`;
+          });
+          el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+          });
+        });
+
+        // --- 3D TILT EFFECT ---
+        const tiltEls = qsa('.svc-card, .cc, .test-card');
+        tiltEls.forEach(el => {
+          el.addEventListener('mousemove', e => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const xc = rect.width / 2;
+            const yc = rect.height / 2;
+            const dx = x - xc;
+            const dy = y - yc;
+            el.style.transform = `perspective(1000px) rotateX(${-dy / 25}deg) rotateY(${dx / 25}deg) translateY(-5px)`;
+          });
+          el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+          });
+        });
+      }
+
+      /* ================================================
+         NAVBAR
+      ================================================ */
+      const navbar = qs('#navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', scrollY > 30);
+      }, { passive: true });
+
+      /* ================================================
+         GLOBAL REACTIVE BG & SYNAPSES
+      ================================================ */
+      const heroSec = qs('#inicio');
+      const canvas = qs('#global-canvas');
+
+      // Base radial glow follow just for hero
+      if (heroSec) {
+        document.addEventListener('mousemove', e => {
+          const rect = heroSec.getBoundingClientRect();
+          heroSec.style.setProperty('--hx', (e.clientX - rect.left) + 'px');
+          heroSec.style.setProperty('--hy', (e.clientY - rect.top) + 'px');
+        });
+      }
+
+      // Advanced WebGL-like Canvas Synapses (Global)
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+
+        const initCanvas = () => {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        };
+        initCanvas();
+        window.addEventListener('resize', initCanvas);
+
+        class Particle {
+          constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 0.7;
+            this.vy = (Math.random() - 0.5) * 0.7;
+            this.radius = Math.random() * 1.5 + 0.5;
+            this.color = Math.random() > 0.5 ? 'rgba(0, 194, 255, 0.65)' : 'rgba(154, 48, 255, 0.65)';
+          }
+          update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+          }
+          draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+          }
+        }
+
+        for (let i = 0; i < 50; i++) particles.push(new Particle());
+
+        let mouseX = -1000, mouseY = -1000;
+        document.addEventListener('mousemove', e => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+        document.addEventListener('mouseleave', () => {
+          mouseX = -1000; mouseY = -1000;
+        });
+
+        const drawSynapses = () => {
+          ctx.clearRect(0, 0, width, height);
+
+          for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            // Connect particles
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 130) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = `rgba(0, 194, 255, ${(1 - dist / 130) * 0.5})`;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+              }
+            }
+
+            // Pull towards mouse (Electric shock effect)
+            const mdx = particles[i].x - mouseX;
+            const mdy = particles[i].y - mouseY;
+            const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+            if (mdist < 220) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(mouseX, mouseY);
+              // Purple/pinkish electricity beam
+              ctx.strokeStyle = `rgba(180, 80, 255, ${(1 - mdist / 220) * 0.9})`;
+              ctx.lineWidth = 1.2;
+              ctx.stroke();
+
+              // Slight magnetic pull
+              particles[i].x -= mdx * 0.02;
+              particles[i].y -= mdy * 0.02;
+            }
+          }
+          requestAnimationFrame(drawSynapses);
+        };
+        drawSynapses();
+      }
+
+      /* ================================================
+         HAMBURGER
+      ================================================ */
+      const ham = qs('#ham');
+      const mmenu = qs('#mob-menu');
+      ham.addEventListener('click', () => {
+        const open = ham.classList.toggle('open');
+        ham.setAttribute('aria-expanded', open);
+        mmenu.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      mmenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          ham.classList.remove('open');
+          ham.setAttribute('aria-expanded', 'false');
+          mmenu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+
+      /* ================================================
+         SCROLL REVEAL
+      ================================================ */
+      const revs = qsa('.reveal');
+      const ro = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('in'), i * 70);
+            ro.unobserve(e.target);
+          }
+        });
+      }, { threshold: .1 });
+      revs.forEach(el => ro.observe(el));
+
+      /* ================================================
+         COUNTER ANIMATION
+      ================================================ */
+      const statsEl = qs('.hero-stats');
+      if (statsEl) {
+        const so = new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) {
+            qsa('.stat-num').forEach(el => {
+              const target = parseInt(el.dataset.target) || 0;
+              const suf = el.dataset.suf || '';
+              const pre = el.dataset.pre || '';
+              let cur = 0;
+              const tick = setInterval(() => {
+                cur = Math.min(cur + target / 60, target);
+                el.innerHTML = pre + Math.floor(cur) + '<span class="acc">' + suf + '</span>';
+                if (cur >= target) clearInterval(tick);
+              }, 16);
+            });
+            so.disconnect();
+          }
+        }, { threshold: .5 });
+        so.observe(statsEl);
+      }
+
+      /* ================================================
+         ACTIVE NAV
+      ================================================ */
+      const secs = qsa('section[id]');
+      const navAs = qsa('.nav-links a');
+      window.addEventListener('scroll', () => {
+        let cur = '';
+        secs.forEach(s => { if (scrollY >= s.offsetTop - 140) cur = s.id; });
+        navAs.forEach(a => {
+          const active = a.getAttribute('href') === '#' + cur;
+          a.style.color = active ? 'var(--text)' : '';
+          a.style.background = active ? 'rgba(0,194,255,.07)' : '';
+        });
+      }, { passive: true });
+
+      /* ================================================
+         FORM SUBMIT FEEDBACK
+      ================================================ */
+      const cform = qs('#cform');
+      const sbtn = qs('#sbtn');
+      const sbtnTxt = qs('#sbtn-txt');
+
+      if (cform) {
+        cform.addEventListener('submit', e => {
+          e.preventDefault();
+          if (sbtn.disabled) return;
+
+          sbtn.disabled = true;
+          sbtnTxt.textContent = '⏳ Enviando...';
+          sbtn.style.opacity = '0.7';
+
+          const formData = new FormData(cform);
+
+          fetch(cform.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          }).then(res => {
+            if (res.ok) {
+              showSuccess();
+              cform.reset();
+            } else {
+              throw new Error();
+            }
+          }).catch(() => {
+            alert('Hubo un error al enviar el mensaje. Por favor intente nuevamente.');
+          }).finally(() => {
+            sbtn.disabled = false;
+            sbtnTxt.textContent = '✉️ Enviar mensaje a OpenCORE';
+            sbtn.style.opacity = '1';
+          });
+        });
+      }
+
+      function showSuccess() {
+        const overlay = document.createElement('div');
+        overlay.className = 'form-success-overlay';
+        overlay.innerHTML = `
+          <div class="success-box">
+            <div class="success-ico">✓</div>
+            <h3>¡Mensaje Recibido!</h3>
+            <p>Gracias por contarnos. Le responderemos a la brevedad.</p>
+            <button onclick="this.closest('.form-success-overlay').remove()" style="padding:12px 28px; border-radius:var(--r); background:linear-gradient(135deg,var(--cyan),var(--blue-l)); color:var(--bg); font-weight:800; border:none; cursor:pointer; font-family:var(--font)">
+              Perfecto, gracias
+            </button>
+          </div>
+        `;
+        document.body.appendChild(overlay);
+        setTimeout(() => overlay.classList.add('in'), 10);
+        overlay.addEventListener('click', e => {
+          if (e.target === overlay) {
+            overlay.remove();
+          }
+        });
+      }
+
+
+      /* ================================================
+         CALCULADORA DE IMPACTO FINANCIERO
+      ================================================ */
+      (function initCalc() {
+        function fmtUSD(n) {
+          if (n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
+          if (n >= 1000) return '$' + Math.round(n/1000) + 'K';
+          return '$' + n.toLocaleString();
+        }
+        function calc() {
+          const inv = +qs('#calcInv')?.value || 2000000;
+          const ine = +qs('#calcIne')?.value / 100 || .15;
+          const tie = +qs('#calcTie')?.value / 100 || .20;
+          const cos = +qs('#calcCos')?.value || 500000;
+          const capital = Math.round(inv * ine);
+          const tieCost = Math.round(cos * tie);
+          const anual = Math.round(capital * 0.2 + tieCost * 12);
+          const ahorro = Math.round(anual * 0.30);
+          const set = (id, v) => { const el = qs('#'+id); if(el) el.textContent = v; };
+          set('rCap', fmtUSD(capital));
+          set('rTie', fmtUSD(tieCost));
+          set('rAnu', fmtUSD(anual));
+          set('rAho', fmtUSD(ahorro));
+          if(qs('#vInv')) qs('#vInv').textContent = fmtUSD(inv);
+          if(qs('#vIne')) qs('#vIne').textContent = (+qs('#calcIne').value) + '%';
+          if(qs('#vTie')) qs('#vTie').textContent = (+qs('#calcTie').value) + '%';
+          if(qs('#vCos')) qs('#vCos').textContent = fmtUSD(cos);
+        }
+        ['calcInv','calcIne','calcTie','calcCos'].forEach(id => {
+          const el = qs('#'+id);
+          if(el) { el.addEventListener('input', calc); }
+        });
+        calc();
+      })();
+
+      /* ================================================
+         SCHEDULING WIDGET
+      ================================================ */
+      function openSched(e) {
+        if(e) e.preventDefault();
+        const modal = qs('#schedModal');
+        if(!modal) return;
+        const slots = qs('#schedSlots');
+        if(slots && !slots.dataset.ready) {
+          slots.dataset.ready = '1';
+          const days = ['Lun 24 feb','Mar 25 feb','Mié 26 feb','Jue 27 feb'];
+          const times = [['09:00 hrs','11:00 hrs'],['10:00 hrs','14:30 hrs'],['09:30 hrs','16:00 hrs'],['11:00 hrs','15:00 hrs']];
+          days.forEach(function(d, i) {
+            times[i].forEach(function(t) {
+              var s = document.createElement('div');
+              s.className = 'sched-slot';
+              s.innerHTML = '<div class="slot-day">'+d+'</div><div class="slot-time">'+t+'</div>';
+              s.onclick = function() {
+                slots.querySelectorAll('.sched-slot').forEach(function(x){ x.classList.remove('selected'); });
+                s.classList.add('selected');
+              };
+              slots.appendChild(s);
+            });
+          });
+        }
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeSched() {
+        var modal = qs('#schedModal');
+        if(modal) modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      function confirmSched() {
+        var name = (qs('#schedName')?.value || '').trim();
+        var email = (qs('#schedEmail')?.value || '').trim();
+        var selected = qs('#schedSlots .selected');
+        if(!name || !email) { alert('Por favor complete su nombre y email.'); return; }
+        if(!selected) { alert('Por favor seleccione un horario disponible.'); return; }
+        var slot = selected.querySelector('.slot-time')?.textContent || '';
+        var day = selected.querySelector('.slot-day')?.textContent || '';
+        closeSched();
+        var overlay = document.createElement('div');
+        overlay.className = 'form-success-overlay';
+        overlay.innerHTML = '<div class="success-box"><div class="success-ico">📅</div><h3>¡Diagnóstico Confirmado!</h3><p>Sesión agendada para el <strong>'+day+'</strong> a las <strong>'+slot+'</strong>. Confirmación enviada a '+email+'.</p><button onclick="this.closest(\'.form-success-overlay\').remove();document.body.style.overflow=\'\'" style="padding:12px 28px;border-radius:var(--r);background:linear-gradient(135deg,var(--cyan),var(--blue-l));color:var(--bg);font-weight:800;border:none;cursor:pointer;font-family:var(--font)">Perfecto, gracias</button></div>';
+        document.body.appendChild(overlay);
+        setTimeout(function(){ overlay.classList.add('in'); }, 10);
+      }
+
+      /* ================================================
+         LEAD MAGNET CAPTURE
+      ================================================ */
+      window.captureLead = function(type, inputId) {
+        var email = (qs('#'+inputId)?.value || '').trim();
+        if(!email || !email.includes('@')) { alert('Por favor ingrese un email corporativo válido.'); return; }
+        var title = type === 'evaluacion' ? 'Evaluación de Pérdidas Operativas' : 'Guía de Deuda Tecnológica';
+        var overlay = document.createElement('div');
+        overlay.className = 'form-success-overlay';
+        overlay.innerHTML = '<div class="success-box"><div class="success-ico">📬</div><h3>¡En camino!</h3><p>Su <strong>'+title+'</strong> será enviada a <strong>'+email+'</strong> en los próximos minutos.</p><button onclick="this.closest(\'.form-success-overlay\').remove();document.body.style.overflow=\'\'" style="padding:12px 28px;border-radius:var(--r);background:linear-gradient(135deg,var(--cyan),var(--blue-l));color:var(--bg);font-weight:800;border:none;cursor:pointer;font-family:var(--font)">Entendido</button></div>';
+        document.body.appendChild(overlay);
+        setTimeout(function(){ overlay.classList.add('in'); }, 10);
+        if(qs('#'+inputId)) qs('#'+inputId).value = '';
+      };
+
+      /* ================================================
+         FLOATING WIDGET SCROLL VISIBILITY
+      ================================================ */
+      (function initWidget() {
+        var widget = qs('#schedWidget');
+        if(!widget) return;
+        window.addEventListener('scroll', function() {
+          if(scrollY > 400) {
+            widget.classList.add('visible');
+          } else {
+            widget.classList.remove('visible');
+          }
+        }, { passive: true });
+      })();
+
+      /* ================================================
+         MOBILE SECTION GLOW (Fase 7)
+      ================================================ */
+      if(isMob) {
+        var glowObs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if(e.isIntersecting) {
+              e.target.classList.add('section-glow');
+              setTimeout(function(){ e.target.classList.remove('section-glow'); }, 2000);
+            }
+          });
+        }, { threshold: 0.3 });
+        qsa('section[id]').forEach(function(s){ glowObs.observe(s); });
+      }
+
+    })();
+  </script>
+</body>
+</html>
